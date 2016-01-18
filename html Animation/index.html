@@ -1,0 +1,36 @@
+<html>
+
+<head>
+    <title>Move mouse on canvas element</title>
+</head>
+
+<body>
+    <canvas id="canvas" width="400" height="400" style='background:#ccc'></canvas>
+</body>
+<script type="text/javascript" src="utils.js"></script>
+<script type="text/javascript">
+window.onload = function() {
+    var canvas = document.getElementById('canvas'),
+        ctx = canvas.getContext('2d'),
+        mouse = utils.captureMouse(canvas);
+
+    canvas.addEventListener('mousedown', function() {
+        ctx.beginPath();
+        ctx.fillStyle = 'red';
+        ctx.moveTo(mouse.x, mouse.y);
+        canvas.addEventListener('mousemove', onMouseMove, false);
+    })
+    canvas.addEventListener('mouseup', function() {
+    	ctx.fill();
+    	ctx.closePath();
+        canvas.removeEventListener('mousemove', onMouseMove, false);
+    }, false);
+
+    function onMouseMove() {
+        ctx.lineTo(mouse.x, mouse.y);
+        ctx.stroke();
+    }
+}
+</script>
+
+</html>

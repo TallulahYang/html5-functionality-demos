@@ -1,0 +1,38 @@
+<html>
+
+<head>
+    <title>loading</title>
+    <style>
+    circle {
+        -webkit-transition: stroke-dasharray .25s;
+        transition: stroke-dasharray .25s;
+    }
+    </style>
+</head>
+
+<body>
+	<!-- stroke-dasharray   虚线 参数1是虚线宽度 参数2为间隔-->
+    <svg width="440" height="440" viewbox="0 0 440 440">
+        <circle cx="220" cy="220" r="170" stroke-width="50" stroke="#D1D3D7" fill="none"></circle>
+        <circle cx="220" cy="220" r="170" stroke-width="50" stroke="#00A5E0" fill="none" transform="matrix(0,-1,1,0,0,440)" stroke-dasharray="0 3000"></circle>
+    </svg>
+    <p>拖我：
+        <input id="range" type="range" min="0" max="100" value="0" style="width:300px;">
+    </p>
+    <script type="text/javascript">
+    if (window.addEventListener) {
+        var range = document.querySelector("#range"),
+            circle = document.querySelectorAll("circle")[1];
+        if (range && circle) {
+            range.addEventListener("change", function() {
+                var percent = this.value / 100,
+                    perimeter = Math.PI * 2 * 170;
+
+                circle.setAttribute('stroke-dasharray', perimeter * percent + " " + perimeter);
+            });
+        }
+    }
+    </script>
+</body>
+
+</html>

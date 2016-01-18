@@ -1,0 +1,32 @@
+<html>
+
+<head>
+    <title>svg sprite</title>
+    <!-- 这里所说的Sprite技术，没错，类似于CSS中的Sprite技术。图标图形整合在一起，实际呈现的时候准确显示特定图标。 -->
+    <style>
+
+    </style>
+</head>
+<!-- 而这个跨SVG调用就是“SVG Sprite技术”的核心所在。
+试想下，我们只要在页面某处载入一个充满Sprite(symbol)的SVG文件（或直接include SVG代码），于是，在页面的任何角落，只要想使用这个图标，只要简单这一点代码就可以了：
+<svg class="size"><use xlink:href="#target" /></svg>
+图标尺寸CSS控制，里面只有一个仅有xlink:href属性的use元素，Done! 完成！
+也即是说，在HTML层面，图标使用的代码成本，跟传统的CSS Sprite或者流行的font-face几乎无异，代码简洁，而且很好维护。所有的SVG图标都在一个SVG源上。retina良好，尺寸可任意拉伸，且颜色可控，真乃Web图标的未来之星。 -->
+<body>
+    <svg>
+        <defs>
+            <g id="shape">
+                <rect x="0" y="0" width="50" height="50" />
+                <circle cx="0" cy="0" r="50" />
+            </g>
+        </defs>
+        <!-- use元素 可重复调用；跨SVG调用； -->
+        <use xlink:href="#shape" x="50" y="50" />
+        <use xlink:href="#shape" x="200" y="50" />
+    </svg>
+    <svg width="500" height="110">
+        <use xlink:href="#shape" x="50" y="50" />
+    </svg>
+</body>
+
+</html>
