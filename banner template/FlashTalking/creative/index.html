@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<!--[if IE 9 ]>        <html class="no-js lt-ie10 ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <title>Santa_300x250</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" type="text/css" href='style.css'>
+</head>
+
+<body>
+    
+    <div class="container">
+        <div class="top line"></div>
+        <div class="right line"></div>
+        <div class="bottom line"></div>
+        <div class="left line"></div> 
+        <div class="wrapper-1440">
+        <div class="coffee_left">
+						<div class="coffee_leftl1 preload"  data-source="cup_1.png"></div>
+						<div class="coffee_leftl0 preload"  data-source="cup_2.png"></div>
+</div>
+<div class="coffee_right">
+						<div class="coffee_rightl1 preload"  data-source="cup2_1.png"></div>
+						<div class="coffee_rightl0 preload"  data-source="cup2_2.png"></div>
+</div>
+<div class="cta">
+						<div class="ctal11 preload"  data-source="line1_1.png"></div>
+						<div class="ctal10 preload"  data-source="line2_1.png"></div>
+						<div class="ctal9 preload"  data-source="line1_1.png"></div>
+						<div class="ctal8 preload"  data-source="line2_1.png"></div>
+						<div class="ctal7 preload"  data-source="cta_1_1.png"></div>
+						<div class="ctal6 preload"  data-source="ctacopy_1.png"></div>
+						<div class="ctal5 preload"  data-source="line1.png"></div>
+						<div class="ctal4 preload"  data-source="line2.png"></div>
+						<div class="ctal3 preload"  data-source="line1.png"></div>
+						<div class="ctal2 preload"  data-source="line2.png"></div>
+						<div class="ctal1 preload"  data-source="cta_1.png"></div>
+						<div class="ctal0 preload"  data-source="cta_txt_white.png"></div>
+</div>
+<div class="hand_left">
+						<div class="hand_leftl5 preload"  data-source="hand_left_1.png"></div>
+						<div class="hand_leftl4 preload"  data-source="finger.png"></div>
+						<div class="hand_leftl3 preload"  data-source="finger.png"></div>
+						<div class="hand_leftl2 preload"  data-source="finger.png"></div>
+						<div class="hand_leftl1 preload"  data-source="hand_left_3.png"></div>
+						<div class="hand_leftl0 preload"  data-source="hand_left_2.png"></div>
+</div>
+<div class="hand_right">
+						<div class="hand_rightl5 preload"  data-source="hand_right_1.png"></div>
+						<div class="hand_rightl4 preload"  data-source="finger_1.png"></div>
+						<div class="hand_rightl3 preload"  data-source="finger_1.png"></div>
+						<div class="hand_rightl2 preload"  data-source="finger_1.png"></div>
+						<div class="hand_rightl1 preload"  data-source="hand_right_3.png"></div>
+						<div class="hand_rightl0 preload"  data-source="hand_right_2.png"></div>
+</div>
+<div class="main">
+						<div class="mainl19 preload"  data-source="bg.jpg"></div>
+						<div class="mainl18 preload"  data-source="logo.png"></div>
+						<div class="mainl17 preload"  data-source="shadow2.png"></div>
+						<div class="mainl16 preload"  data-source="undefined"></div>
+						<div class="mainl15 preload"  data-source="shadow1.png"></div>
+						<div class="mainl14 preload"  data-source="undefined"></div>
+						<div class="mainl13 preload"  data-source="shadow4.png"></div>
+						<div class="mainl12 preload"  data-source="undefined"></div>
+						<div class="mainl11 preload"  data-source="shadow3.png"></div>
+						<div class="mainl10 preload"  data-source="undefined"></div>
+						<div class="mainl9 preload"  data-source="shadow7.png"></div>
+						<div class="mainl8 preload"  data-source="ball.png"></div>
+						<div class="mainl7 preload"  data-source="txt5.png"></div>
+						<div class="mainl6 preload"  data-source="txt1.png"></div>
+						<div class="mainl5 preload"  data-source="pro.jpg"></div>
+						<div class="mainl4 preload"  data-source="txt4_3.png"></div>
+						<div class="mainl3 preload"  data-source="txt4_2.png"></div>
+						<div class="mainl2 preload"  data-source="txt4_1.png"></div>
+						<div class="mainl1 preload"  data-source="logo2.png"></div>
+						<div class="mainl0 preload"  data-source="undefined"></div>
+</div>
+
+        </div>
+
+    </div>
+    <script type="text/javascript">
+    window.onload = function() {
+        pageLoadedHandler();
+        function pageLoadedHandler(){      
+                var prex ='https:'; 
+                //Load in Javascript
+                loadJs(prex + '//cdnjs.cloudflare.com/ajax/libs/zepto/1.1.3/zepto.min.js', function (){
+                    loadJs(prex + '//cdnjs.cloudflare.com/ajax/libs/gsap/1.11.4/TweenMax.min.js', function (){
+                        loadJs('Timeline-ck.js', function (){
+                            loadJs('app.js', function (){
+                                startAni();
+                            });
+                        });
+                    });
+                });
+            }
+        function loadJs(file, complete){
+            var ej = document.createElement('script');
+            ej.setAttribute('type', 'text/javascript');
+            ej.setAttribute('src', file);  
+            ej.onload = complete;
+            document.getElementsByTagName('head')[0].appendChild(ej);
+           
+        };
+        function startAni(){
+          	
+fps=24;
+	imageInfos=[{x:0,y:0,w:123,h:25},{x:0,y:0,w:123,h:25},{x:0,y:0,w:125,h:1},{x:0,y:0,w:125,h:1},{x:0.048,y:0.054,w:62,h:37},{x:0,y:0,w:11,h:10},{x:0,y:0,w:52,h:39},{x:0,y:0,w:12,h:10},{x:0,y:0,w:52,h:39},{x:0,y:0,w:103,h:14},{x:0,y:0,w:1,h:27},{x:0,y:0,w:103,h:14},{x:0,y:0,w:1,h:27},{x:0,y:0,w:15,h:21},{x:0,y:0,w:26,h:35},{x:0.43,y:0.03,w:15,h:33},{x:0,y:0,w:90,h:196},{x:0,y:0,w:15,h:21},{x:0,y:0,w:26,h:35},{x:0,y:0,w:15,h:33},{x:0,y:0,w:200,h:200},{x:0.238,y:0.368,w:63,h:38},{x:-0.456,y:-0.684,w:79,h:19},{x:0.114,y:-0.519,w:149,h:27},{x:-0.209,y:-0.32,w:86,h:25},{x:0,y:0,w:315,h:250},{x:0.204,y:0,w:186,h:18},{x:-0.102,y:-0.056,w:206,h:18},{x:0,y:0,w:30,h:30},{x:-0.443,y:-0.326,w:85,h:72},{x:1.5,y:0.8,w:12,h:10},{x:-0.112,y:-0.112,w:82,h:63},{x:0.2,y:0.095,w:15,h:21},{x:0,y:0,w:64,h:168},{x:2.727,y:0.9,w:11,h:10},{x:-0.132,y:-0.148,w:103,h:79},{x:4.667,y:0.095,w:15,h:21},{x:0,y:0,w:64,h:168},{x:0,y:0,w:300,h:250}];
+	
+	
+	layerNames=[["coffee_leftl0",[5,-1]],["coffee_leftl1",[6,-1]],["coffee_rightl0",[7,-1]],["coffee_rightl1",[8,-1]],["ctal0",[9,-1]],["ctal1",[0,-1]],["ctal2",[10,-1]],["ctal3",[2,-1]],["ctal4",[10,-1]],["ctal5",[2,-1]],["ctal6",[11,-1]],["ctal7",[1,-1]],["ctal8",[12,-1]],["ctal9",[3,-1]],["ctal10",[12,-1]],["ctal11",[3,-1]],["hand_leftl0",[13,-1]],["hand_leftl1",[14,-1]],["hand_leftl2",[15,-1]],["hand_leftl3",[15,-1]],["hand_leftl4",[15,-1]],["hand_leftl5",[16,-1]],["hand_rightl0",[17,-1]],["hand_rightl1",[18,-1]],["hand_rightl2",[19,-1]],["hand_rightl3",[19,-1]],["hand_rightl4",[19,-1]],["hand_rightl5",[20,-1]],["mainl0",[21,-1]],["mainl1",[21,-1]],["mainl2",[22,-1]],["mainl3",[23,-1]],["mainl4",[24,-1]],["mainl5",[25,-1]],["mainl6",[26,-1]],["mainl7",[27,-1]],["mainl8",[28,-1]],["mainl9",[29,-1]],["mainl10",[30,-1]],["mainl11",[31,-1]],["mainl12",[32,-1]],["mainl13",[33,-1]],["mainl14",[34,-1]],["mainl15",[35,-1]],["mainl16",[36,-1]],["mainl17",[37,-1]],["mainl18",[4,-1]],["mainl19",[38,-1]]];
+	eases=[null,[0.333,0.667,0.667,1],[0.177,0,0.733,1],[0.397,0,0.511,1],[0.133,0,0.644,1],[0.228,0,0.586,1],[0.212,0,0.669,0.611],[0.372,0,0.716,0.563],[0.276,0.367,0.728,1],[0.212,0,0.71,1],[0.435,0,0.595,1],[0.288,0,0.537,1],[0.277,0.51,0.594,1],[0.438,0,0.58,1]];
+	totalFrame=326;
+
+animationData["coffee_left"]=[0,[1440,[1,[0,0,0,1,1,1,0,],[43,,,,,,,]],[0,[0,30,9,1,1,1,0,],[2,,,,,,,1],[7,30.6,8.2,,,,,2],[13,29.8,9.3,,,,,2],[19,30.5,7.9,,,,,2],[25,29.5,9.7,,,,,2],[31,30,8.1,,,,,2],[37,29.8,9.6,,,,,2],[43,30,9,,,,,]]]];
+animationData["coffee_right"]=[0,[1440,[3,[0,0,0,1,1,1,0,]],[2,[0,18,8,1,1,1,0,],[2,,,,,,,1],[7,18.8,7.2,,,,,2],[13,17.2,8.6,,,,,2],[19,18.6,7.4,,,,,2],[25,17.6,8.4,,,,,2],[31,18.4,7.2,,,,,2],[37,17.6,8.6,,,,,2],[43,18,8,,,,,]]]];
+animationData["cta"]=[0,[1440,[15,[0,123,0,0.005,1,1,0,3],[28,0,,1,,,,]],[14,[0,0,0,1,0.037,1,0,3],[28,,,,1,,,]],[13,[0,0,26,0.005,1,1,0,3],[28,,,1,,,,]],[12,[0,124,0,1,0.037,1,0,3],[28,,,,1,,,]],[11,[0,,,,,0,],[9,1,1,1,1,0,0,3],[28,,,,,1,,]],[10,[0,,,,,0,],[9,11,7,1,1,0,0,3],[28,,,,,1,,]],[9,[0,,,,,0,],[28,0,0,1,1,0,0,3],[41,,,,,1,,],[51,,,,,,,3],[61,,,,,0,,],[72,,,,,,,3],[82,,,,,1,,]],[8,[0,,,,,0,],[28,0,0,1,1,0,0,3],[41,,,,,1,,],[51,,,,,,,3],[61,,,,,0,,],[72,,,,,,,3],[82,,,,,1,,]],[7,[0,,,,,0,],[28,0,26,1,1,0,0,3],[41,,,,,1,,],[51,,,,,,,3],[61,,,,,0,,],[72,,,,,,,3],[82,,,,,1,,]],[6,[0,,,,,0,],[28,124,0,1,1,0,0,3],[41,,,,,1,,],[51,,,,,,,3],[61,,,,,0,,],[72,,,,,,,3],[82,,,,,1,,]],[5,[0,,,,,0,],[28,1,1,1,1,0,0,3],[41,,,,,1,,],[51,,,,,,,3],[61,,,,,0,,],[72,,,,,,,3],[82,,,,,1,,]],[4,[0,,,,,0,],[28,11,7,1,1,0,0,3],[41,,,,,1,,],[51,,,,,,,3],[61,,,,,0,,],[72,,,,,,,3],[82,,,,,1,,]]]];
+animationData["hand_left"]=[0,[1440,[21,[0,0,0,1,1,1,0,]],[20,[0,67,8.3,1,1,1,0,],[4,,,,,,,4],[11,64.25,10.35,,,,-15,5],[20,68.6,8.1,0.999,0.999,,1,]],[19,[0,67.15,6.1,1,1,1,0,],[4,,,,,,,4],[11,62.6,10.55,0.999,0.999,,-25,5],[20,65.9,8.1,1,1,,-9,]],[18,[0,67.65,3.9,1,1,1,0,],[4,,,,,,,4],[11,62.65,12.2,,,,-36,5],[20,64.8,8.65,,,,-18,]],[17,[0,54,19,1,1,1,0,],[4,,,,,,,4],[11,47.45,21.65,,,,-14,5],[20,50.55,21.2,0.999,0.999,,-10,]],[16,[0,70,2,1,1,1,0,],[4,,,,,,,4],[11,68.8,1.4,,,,19,5],[20,67.4,1,,,,8,]]]];
+animationData["hand_right"]=[0,[1440,[27,[0,-55,-1,1,1,1,0,]],[26,[0,0.6,8.65,1,1,1,0,],[4,,,,,,,5],[11,1.15,6.15,,,,11,5],[20,0.6,6.7,,,,6,]],[25,[0,1.7,5.35,1,1,1,0,],[4,,,,,,,5],[11,3,3.7,,,,21,5],[20,2.15,4,,,,14,]],[24,[0,2.6,5.05,1,1,1,0,],[4,,,,,,,5],[11,4.15,2.3,,,,29,5],[20,3.45,2.6,,,,23,]],[23,[0,9,19,1,1,1,0,],[4,,,,,,,4],[11,15.15,15.85,,,,11,5],[20,12.7,16.8,,,,7,]],[22,[0,3,2,1,1,1,0,],[4,,,,,,,4],[11,5.6,3.25,,,,-12,5],[20,2.3,4.9,,,,-16,]]]];
+animationData["main"]=[0,[1440,[47,[0,0,0,1,1,1,0,]],[46,[0,11,13,1,1,1,0,]],[45,[0,,,,,0,],[22,-114.45,340.65,1.159,1.403,0.5,-21,11],[44,49.7,119.95,1,1,1,1,],[49,,,,,,,13],[70,-93.15,290.65,1.003,1.215,0.5,0,],[71,,,,,0,]],[44,[0,,,,,0,],[22,-198.4,332.7,1.506,1.506,1,-22,11],[44,15,91,1,1,,0,],[49,,,,,,,13],[70,-145.15,245.6,1.276,1.276,,,]],[43,[0,,,,,0,],[32,37.15,152,1,1,0,6,12],[44,114.05,81.3,,,0.5,,]],[42,[0,,,,,0,],[22,-105.05,266.4,1.907,1.907,1,-22,11],[44,97,81,1,1,,0,]],[41,[0,,,,,0,],[76,339.35,295.05,1,1.309,1,-19,11],[98,165.8,92.9,,,,-10,],[103,,,,,,,13],[124,351.25,310.8,,,,,]],[40,[0,,,,,0,],[76,385.05,250.5,1.319,1.319,1,0,11],[98,196,91,1,1,,,],[103,,,,,,,13],[124,385.05,250.5,1.319,1.319,,,]],[39,[0,,,,,0,],[86,208.45,163.15,1.429,1.429,0,0,12],[98,157.85,90.1,1,1,0.5,,]],[38,[0,,,,,0,],[76,319.35,229.25,1.664,1.664,1,0,11],[98,150,81,1,1,,,]],[37,[0,,,,,0,],[129,219.8,90.1,0.054,0.078,0.32,0,1],[136,229.75,96.1,1.15,1.15,1,,10],[140,227,97,1,1,,,]],[36,[0,,,,,0,],[129,216.8,86.8,0.147,0.147,1,0,1],[136,201.75,71.75,1.15,1.15,,,10],[140,204,74,1,1,,,]],[35,[0,,,,,0,],[211,68,217,1,1,0,0,6],[228,,,,,1,,]],[34,[0,,,,,0,],[146,19,216,1,1,0,0,6],[163,,,,,1,,],[194,,,,,,,9],[208,,,,,0,,],[209,,,,,0,]],[33,[0,,,,,0,],[263,0,0,1,1,0,0,7],[277,-5,,,,1,,8],[313,-15,,,,,,]],[32,[0,,,,,0,],[303,74,146,1,1,0,0,6],[325,,,,,1,,]],[31,[0,,,,,0,],[299,8,122,1,1,0,0,6],[321,,,,,1,,]],[30,[0,,,,,0,],[295,94,98,1,1,0,0,6],[317,,,,,1,,]],[29,[0,,,,,0,],[291,-2,1,1,1,0,0,6],[313,,,,,1,,]],[28,[0,,,,,0,],[313,40,175,1,1,1,0,]]]];
+	initTimeLine();
+
+        }
+    }
+    </script>
+    <script src="http://cdn.flashtalking.com/frameworks/js/api/2/9/html5API.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>banner</title>
+    <script src="http://s0.2mdn.net/ads/studio/Enabler.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href='styles/style.css'>
+</head>
+
+<body style="background-color:#D4D4D4">
+    <div class = 'container'>
+        <div class="top line"></div>
+        <div class="right line"></div>
+        <div class="bottom line"></div>
+        <div class="left line"></div>
+        <div id="e-loading" class="loading">
+            <div id="spinner">
+                <div class="bounce1"></div>
+                <div class="bounce2"></div>
+                <div class="bounce3"></div>
+                <div class="bounce4"></div>
+            </div>
+        </div>
+        <div class="hotspot" id='hotspot'>
+            <div class="ctaHot" id='ctaHot'></div>
+        </div>
+        <canvas id="canvas" width="300" height="600" style="background-color:rgba(255,0,0,0)"></canvas>
+    </div>
+</body>
+<script>
+    var ua = window.navigator.userAgent.toLowerCase(),
+        hasTouch = ('ontouchstart' in window),
+        isIE = window.navigator.appName.indexOf("Microsoft") != -1,
+        isIE8 = ua.match(/msie 8/) !== null,
+        isIE9 = ua.match(/msie 9/) !== null,
+        isS3 = ua.match(/gt\-i9300/i) !== null,
+        isS4 = ua.match(/gt\-i9500/i) !== null;
+    if(isS3) document.body.className ='S3';
+    if (!isS4) document.body.className ='notS4';
+</script>
+<script>
+window.onload = function() {
+    var debug = true , files;
+    debug ? files = ["scripts/zepto.min.js",
+        "scripts/easeljs-0.8.1.min.js",
+        "scripts/tweenjs-0.6.1.min.js",
+        "scripts/movieclip-0.8.1.min.js",
+        "scripts/preloadjs-0.6.1.min.js",
+        "banner.js",
+        "scripts/app.js"
+    ] : files = ["//cdnjs.cloudflare.com/ajax/libs/zepto/1.1.6/zepto.min.js",
+        "//code.createjs.com/easeljs-0.8.1.min.js",
+        "//code.createjs.com/tweenjs-0.6.1.min.js",
+        "//code.createjs.com/movieclip-0.8.1.min.js",
+        "//code.createjs.com/preloadjs-0.6.1.min.js",
+        "banner.js",
+        "scripts/app.js"
+    ];
+
+    if (Enabler.isInitialized()) {
+        enablerInitHandler();
+    } else {
+        Enabler.addEventListener(studio.events.StudioEvent.INIT, enablerInitHandler);
+    }
+
+    function enablerInitHandler() {
+        if (Enabler.isPageLoaded()) {
+            pageLoadedHandler();
+        } else {
+            Enabler.addEventListener(studio.events.StudioEvent.PAGE_LOADED,
+                pageLoadedHandler);
+        }
+    }
+    function pageLoadedHandler() {
+        i = 0;
+
+        var loadJS = function() {
+            var extJavascript = document.createElement('script');
+            if (i < files.length - 1) {
+                extJavascript.onload = function() {
+                    loadJS();
+                }
+            } else {
+                extJavascript.onload = function() {
+                    init();
+                }
+            }
+            extJavascript.setAttribute('type', 'text/javascript');
+            extJavascript.setAttribute('src', files[i]);
+            document.getElementsByTagName('head')[0].appendChild(extJavascript);
+            i++;
+        }
+
+        loadJS();
+
+    }
+
+}
+</script>
+
+</html>

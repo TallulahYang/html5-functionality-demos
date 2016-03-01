@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>iSlider</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+    <div id="pic-islider">
+        <img src="images/fill.png" />
+        <ul class="islider-container">
+            <li><img src="images/pic-1.jpg" />
+            </li>
+            <li><img src="images/pic-2.jpg" />
+            </li>
+            <li><img src="images/pic-3.jpg" />
+            </li>
+            <li><img src="images/pic-4.jpg" />
+            </li>
+            <li><img src="images/pic-5.jpg" />
+            </li>
+        </ul>
+        <div id="prev" class="prev-btn">&lt;</div>
+        <div id="next" class="next-btn">&gt;</div>
+        <ul class="islider-indicators">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+    <script type="text/javascript" src="js/zepto.min.js"></script>
+    <script type="text/javascript" src="js/TweenMax.min.js"></script>
+    <script type="text/javascript" src="js/islider.js"></script>
+    <script type="text/javascript">
+    $(function() {
+        //自定义animate
+        $.fn.islider.animate = function(leftValue, t, easing) {
+            var scope = this;
+            TweenMax.to(scope.container,t,{
+                left: leftValue,
+                ease: easing,
+                onComplete: function(){
+                    scope.end();
+                }
+            });
+        };
+        var picIslider;
+        window.isMoving = false;
+        console.log($("#pic-islider"))
+        $("#pic-islider").islider({
+            currentIndex: 0,
+            duration: .4,
+            easing: Sine.easeInOut,
+            touch: true,
+            defaultPosition: "absolute",
+            loop:false, // set flase and css (#prev.unable,#next.unable)
+            start: undefined,
+            ended: undefined,
+            container: ".islider-container",
+            indicators: ".islider-indicators",
+            prevBtn: ".prev-btn",
+            nextBtn: ".next-btn"
+        }, function() {
+            picIslider = this;
+        });
+        // picIslider.seekTo(2, 0.00001);
+    });
+    </script>
+</body>
+
+</html>

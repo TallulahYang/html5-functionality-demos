@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+<script type="text/javascript">
+	var s = [0, 0, 0],
+		// t = [0, 0, 0],
+		alpha = .5;
+		// bg = [158, 158, 158];
+	function calColor (bg, t, alpha) {
+		for(var i=0;i<3; i++) {
+			(function (i) {
+				s[i] = (t[i] - alpha * bg[i])/(1-alpha);
+			})(i);
+		}
+		console.log('rgb('+Math.round(s[0])+', '+ Math.round(s[1]) + ', ' + Math.round(s[2]) +') ');
+		return s;
+	}
+	calColor([158, 158, 158], [56, 62, 58], alpha);
+	calColor([158, 158, 158], [1, 2, 32], alpha);
+	calColor([158, 158, 158], [242, 242, 242], alpha);
+	calColor([158, 158, 158], [200, 183, 163], alpha)
+	calColor([158, 158, 158], [71, 0, 18], alpha);
+</script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+html,body {
+    width: 100%;
+    height: 100%;
+}
+
+html, body, div, canvas, img {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #e7e7e7;
+}
+#container {
+    /*width: 950px;
+    height: 446px;*/
+    width: 475px;
+    height: 223px;
+    position: relative;
+    margin: 0 auto;
+    top: 100px;
+
+    .car {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+
+        .c-render {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+    }
+
+    .color-switch {
+        position: absolute;
+        top: 240px;
+        list-style: none;
+        padding: 0;
+        .color {
+            display: inline-block;
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            border: 3px solid #d41e1d;
+            background: #ccc;
+        }
+
+        .black {
+            background: #0a0a0b;
+        }
+        .brown {
+            background: #533838;
+        }
+        .red {
+            background: #900101;
+        }
+        .blue {
+            background: #1f47b1;
+        }
+    }
+}

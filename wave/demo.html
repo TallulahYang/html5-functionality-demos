@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+    <title>Demo</title>
+    <script type="text/javascript" src="zepto.min.js"></script>
+    <script type="text/javascript" src="lake.js"></script>
+    <script type="text/javascript">
+    $(function() {
+        var wave1 = $('#lake-img').lake({
+            'waves': 6,
+            'scale': 0.5
+        });
+        wave1.start();
+        setTimeout(function(){
+            wave1.stop();
+        },2000)
+
+        $('#lake-img2').lake();
+
+        $('#lake-img3').lake({
+            'speed': 1.5,
+            'scale': 1.5
+        });
+    });
+    </script>
+    <style type="text/css">
+    body {
+        font-size: 16px;
+    }
+    
+    h1 {
+        font-size: 42px;
+    }
+    
+    h2 {
+        font-size: 24px;
+    }
+    
+    h3 {
+        font-size: 18px;
+    }
+    
+    body {
+        font-family: sans-serif;
+        line-height: 1.5;
+    }
+    
+    pre {
+        font-family: monospace;
+        ;
+        white-space: pre-wrap;
+        font-size: 14px;
+    }
+    
+    h1,
+    h2,
+    h3 {
+        font-family: 'Palatino Linotype', serif;
+    }
+    
+    strong {
+        font-weight: bold;
+    }
+    
+    p {
+        margin-bottom: 12px;
+    }
+    
+    h2 {
+        margin-bottom: 12px;
+        margin-top: 24px;
+    }
+    
+    h2 {
+        border-bottom: 1px solid #aaa;
+        padding-bottom: 6px;
+    }
+    
+    h3 {
+        padding-bottom: 6px;
+    }
+    
+    h1 {
+        color: #269;
+    }
+    
+    canvas {
+        float: left;
+    }
+    
+    #lakes {
+        overflow: hidden;
+    }
+    
+    #container {
+        width: 720px;
+        margin: 30px auto;
+    }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div id="lakes">
+            <img id="lake-img" src="lake.png" style="display: none;" />
+            <img id="lake-img2" src="lake2.png" style="display: none;" />
+            <img id="lake-img3" src="lake3.png" style="display: none;" />
+        </div>
+    </div>
+</body>
+
+</html>

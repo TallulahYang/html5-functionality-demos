@@ -1,0 +1,22 @@
+
+body 
+{
+	background: #416EB2;
+	width: 500px;
+	margin: 0px;
+}
+
+#leafContainer
+{
+	position: absolute;
+	top: 0px;
+	width: 500px;
+	height: 800px;
+	overflow: hidden;
+}
+#leafContainer > img 
+{
+	position: absolute;
+	width: 80px;
+	height: 40px;
+}

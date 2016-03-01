@@ -1,0 +1,225 @@
+#container ,.bg-exit{
+    position: absolute; 
+    width: 300px;
+    height: 250px;
+    overflow: hidden;
+    cursor: pointer;
+    div {
+        position: absolute;
+    }
+}
+#container{
+  border: 1px solid #000;
+  box-sizing:border-box;
+}
+.copy1FPO,.copy2FPO,.copy3FPO{
+  opacity: 0;
+}
+.preload img ,.icon img{
+    display: block; 
+    width: 100%;
+    height: auto;
+}
+.bg {
+    // opacity: 0;
+    width: 100%;
+    height:100%;
+    .wall {
+        background-repeat: repeat-x;
+        background-size: 340px auto;
+        width: 340px;
+        height: 250px;
+        left:-20px;
+    }
+    .chair {
+        width: 131px;
+        top: 79px;
+        left: 112px;
+        -webkit-transform:translate3d(25px,0,0);
+        -moz-transform:translate3d(25px,0,0);
+        -ms-transform:translate3d(25px,0,0);
+        transform:translate3d(25px,0,0);
+    }
+    .desk {
+        background-repeat: repeat-x;
+        background-size: 340px auto;
+        width: 340px;
+        height: 86px;
+        top:164px;
+        left:-30px;
+        -webkit-transform:translate3d(30px,0,0);
+        -moz-transform:translate3d(30px,0,0);
+        -ms-transform:translate3d(30px,0,0);
+        transform:translate3d(30px,0,0);
+    }
+    .plate {
+        width: 132px;
+        top: 9px;
+        left: 142px;
+    }
+    .fork {
+        width: 54px;
+        top: -1px;
+        left: 101px;
+    }
+    .can {
+        width: 40px;
+        top: 156px;
+        left: 222px;
+        -webkit-transform:translate3d(30px,0,0);
+        -moz-transform:translate3d(30px,0,0);
+        -ms-transform:translate3d(30px,0,0);
+        transform:translate3d(30px,0,0);
+    }
+}
+.bgImg{
+  .wall{
+    background-image: url(bg.jpg);
+  }
+  .desk{
+    background-image: url(desk.png);
+  }
+}
+.copy1 {
+    width: 202px;
+    // opacity: 0;
+    top: 18px;
+    left: 14px;
+    .copy1-1{
+      background-position: 0 0;
+    }
+    .copy1-2{
+      top: 33px;
+      background-position: 0 -33px;
+    }
+    .copy1-3{
+      top: 66px;
+      background-position: 0 -66px;
+    }
+}
+.copy1Img{
+    div{
+      opacity: 0;
+      width: 100%;
+      height: 33px;
+      background-image: url(copy1.png);
+      background-repeat: no-repeat;
+      background-size: 202px auto;
+    }
+}
+.copy2 {
+    width: 235px;
+    // opacity: 0;
+    top: 20px;
+    left: 15px;
+    .copy2-1{
+      background-position: 0 0;
+    }
+    .copy2-2{
+      top: 33px;
+      background-position: 0 -33px; 
+    }
+    .copy2-3{
+      top: 66px;
+      background-position: 0 -66px;
+    }
+}
+.copy2Img{
+    div{
+      opacity: 0;
+      width: 100%;
+      height: 33px;
+      background-image: url(copy2.png);
+      background-size: 235px auto;
+      background-repeat: no-repeat;
+    }
+}
+.copy3 {
+    width: 182px;
+    // opacity: 0;
+    left: 13px;
+    top: 19px;
+    .copy3-1{
+      background-position: 0 0;
+      height: 25px;
+    }
+    .copy3-2{
+      top: 25px;
+      background-position: 0 -25px;
+    }
+    .copy3-3{
+      top: 58px;
+      background-position: 0 -58px;
+    }
+    .copy3-4{
+      top: 91px;
+      background-position: 0 -91px;
+    }
+}
+.copy3Img{
+    div{
+      opacity: 0;
+      width: 100%;
+      height: 33px;
+      background-image: url(copy3.png);
+      background-size: 182px auto;
+      background-repeat: no-repeat;
+    }
+}
+.BritaPitcher {
+    width: 130px;
+    right: 3px;
+    bottom: 0;
+    opacity: 0;
+}
+.waterAni {
+    width: 300px;
+    height: 100%;
+    .bubbles{
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+    .wave{
+      width: 838px;
+      height: 83px;
+      top:270px;
+      left:-62px;
+      // .waveImg{
+      //   width: 300px;
+      //   height: 62px;
+      // }
+      // .w1{
+      //   left:-62px;
+      //   top:270px;
+      // }
+      // .w2{
+      //   left:-62px;
+      //   top:270px;
+      // }
+      // .w3{
+      //   left:-62px;
+      //   top:270px;
+      // }
+    }
+    .w2{
+      -webkit-transform:scaleX(.77) scaleY(.47);
+      -moz-transform:scaleX(.77) scaleY(.47);
+      -ms-transform:scaleX(.77) scaleY(.47);
+      transform:scaleX(.77) scaleY(.47);
+      top: 261px;
+      left: -82px;
+    }
+    .water{
+      width: 300px;
+      top:255px;
+      left:0;
+    }
+}
+.cta {
+    opacity: 0;
+    width: 111px;
+    height: 21px;
+    left: 13px;
+    top: 171px;
+}

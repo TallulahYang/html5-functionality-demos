@@ -1,0 +1,89 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	outline: none;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul, li {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+#canvas {
+	border: 1px solid #999;
+	// position: absolute;
+	// left: 150px;
+	// top: 10px;
+	// background: #eee;
+	cursor: pointer;
+	margin: 20px;
+	cursor: pointer;
+	// background: url(imgs/car.png) 0 0 no-repeat;
+	// background-size: 700px 328px;
+}
+.color {
+	height: 80px;
+	width: 80px;
+	float: left;
+	border: 1px solid #eee;
+	text-align: center;
+	line-height: 80px;
+	cursor: pointer;
+	background: rgb(158, 158, 158);
+}
+.color div {
+	width: 100%;
+	height: 100%;
+	opacity: .5;
+}
+#red div {
+	background: rgb(70, 78, 73);
+}
+#blue div {
+	background: rgb(1, 3, 40);
+}
+#black div {
+	background: rgb(303, 303, 303);
+}
+#green div {
+	background: rgb(250, 229, 204);
+}
+#yellow div {
+	background: rgb(89, 0, 23);
+}
+#fps-wrapper {
+	clear: both;
+}

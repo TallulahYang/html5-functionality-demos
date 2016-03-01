@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <style type="text/css">
+    .e-switch-dots,
+.c-switch-dots {
+  position: absolute;
+  width: 334px;
+  height: 64px;
+  top: 0;
+  font-size: 0;
+  z-index: 100;
+}
+.e-switch-dots .esd-title,
+.c-switch-dots .esd-title {
+  position: relative;
+  left: 54px;
+  top: 18px;
+}
+.e-switch-dots .esd-title img,
+.c-switch-dots .esd-title img {
+  visibility: visible;
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+.e-switch-dots .esd-title li,
+.c-switch-dots .esd-title li {
+  display: block;
+  position: absolute;
+  /*opacity: 0;*/
+  width: 100px;
+}
+.e-switch-dots .esd-dot-area,
+.c-switch-dots .esd-dot-area {
+  width: 100%;
+  height: 100%;
+}
+.e-switch-dots .row,
+.c-switch-dots .row {
+  /*right: 53px;
+  top: 9px;
+  width: 150px;
+  position: absolute;*/
+}
+.e-switch-dots .row .esd-dot:last-child,
+.c-switch-dots .row .esd-dot:last-child {
+  margin-right: 0px !important;
+}
+.e-switch-dots .row .esd-dot,
+.c-switch-dots .row .esd-dot {
+  position: relative;
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+}
+.e-switch-dots .row .esd-dot .dot,
+.c-switch-dots .row .esd-dot .dot {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  margin-top: -9px;
+  margin-left: -9px;
+  top: 50%;
+  left: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  box-sizing: border-box;
+  /*opacity: 0;*/
+}
+.e-switch-dots .row .esd-dot .dot-bg,
+.c-switch-dots .row .esd-dot .dot-bg {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  margin-top: -12px;
+  margin-left: -12px;
+  top: 50%;
+  left: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  background: #fff;
+  box-sizing: border-box;
+  border: 2px solid #d71921;
+  /*opacity: 0;*/
+  /*visibility: hidden;*/
+}
+.e-switch-dots .row .esd-dot .dot-0,
+.c-switch-dots .row .esd-dot .dot-0 {
+  background: #13186B;
+}
+.e-switch-dots .row .esd-dot .dot-1,
+.c-switch-dots .row .esd-dot .dot-1 {
+  background: #9A1F1A;
+}
+.e-switch-dots .row .esd-dot .dot-2,
+.c-switch-dots .row .esd-dot .dot-2 {
+  background: #E1E1E1;
+  border: 1px solid #ccc;
+}
+.e-switch-dots .row .esd-dot .dot-3,
+.c-switch-dots .row .esd-dot .dot-3 {
+  background: #FFFFFF;
+  border: 1px solid #ccc;
+}
+.e-switch-dots .row .esd-dot .dot-4,
+.c-switch-dots .row .esd-dot .dot-4 {
+  background: #000000;
+}
+.e-switch-dots .row .esd-dot .dot-5,
+.c-switch-dots .row .esd-dot .dot-5 {
+  background: #383B45;
+}
+.c-switch-dots {
+  left: 171px;
+}
+.c-switch-dots .row {
+  top: 39px;
+  right: 46px;
+}
+.c-switch-dots .row .esd-dot {
+  width: 22px;
+}
+.c-switch-dots .row .esd-dot .dot {
+  width: 15px;
+  height: 15px;
+  margin-top: -7px;
+  margin-left: -7px;
+}
+.c-switch-dots .row .esd-dot .dot-bg {
+  width: 21px;
+  height: 21px;
+  margin-top: -10px;
+  margin-left: -10px;
+  background: rgba(0, 0, 0, 0);
+}
+.c-switch-dots .row .esd-dot .dot-0 {
+  background: #9A1F1A;
+}
+.c-switch-dots .row .esd-dot .dot-1 {
+  background: #605B55;
+}
+.c-switch-dots .row .esd-dot .dot-2 {
+  background: #13186B;
+  border: none;
+}
+    </style>
+</head>
+
+<body>
+    <div id="e-car" class="e-car"></div>
+    <div id="e-switch-dots" class="e-switch-dots">
+        <div class="esd-title">
+            <li class="title preload1" data-src="expanded/colorname-0.png"></li>
+            <li class="title preload1" data-src="expanded/colorname-1.png"></li>
+            <li class="title preload1" data-src="expanded/colorname-2.png"></li>
+            <li class="title preload1" data-src="expanded/colorname-3.png"></li>
+            <li class="title preload1" data-src="expanded/colorname-4.png"></li>
+            <li class="title preload1" data-src="expanded/colorname-5.png"></li>
+            <li class="title preload1" data-src="expanded/colorname-6.png"></li>
+            <li class="title preload1" data-src="expanded/colorname-7.png"></li>
+        </div>
+        <div class="esd-dot-area">
+            <div class="row">
+                <div class="esd-dot" data-color=0>
+                    <div class="dot-bg"></div>
+                    <div class="dot dot-0" data-src="e-color-383e3a.png"></div>
+                </div>
+                <div class="esd-dot" data-color=1>
+                    <div class="dot-bg"></div>
+                    <div class="dot dot-1" data-src="e-color-00021f.png"></div>
+                </div>
+                <div class="esd-dot" data-color=2>
+                    <div class="dot-bg"></div>
+                    <div class="dot dot-2" data-src="e-color-f3f2f2.png"></div>
+                </div>
+                <div class="esd-dot" data-color=3>
+                    <div class="dot-bg"></div>
+                    <div class="dot dot-3" data-src="e-color-c7b7a2.png"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="esd-dot" data-color=4>
+                    <div class="dot-bg"></div>
+                    <div class="dot dot-4" data-src="e-color-46000e.png"></div>
+                </div>
+                <div class="esd-dot" data-color=5>
+                    <div class="dot-bg"></div>
+                    <div class="dot dot-5" data-src="e-color-63615e.png"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+    var maskData = {
+        "frames": {
+
+            "00": {
+                "frame": {
+                    "x": 2,
+                    "y": 2,
+                    "w": 568,
+                    "h": 260
+                },
+                "rotated": false,
+                "trimmed": false,
+                "spriteSourceSize": {
+                    "x": 0,
+                    "y": 0,
+                    "w": 568,
+                    "h": 260
+                },
+                "sourceSize": {
+                    "w": 568,
+                    "h": 260
+                }
+            },
+            "01": {
+                "frame": {
+                    "x": 572,
+                    "y": 2,
+                    "w": 568,
+                    "h": 260
+                },
+                "rotated": false,
+                "trimmed": false,
+                "spriteSourceSize": {
+                    "x": 0,
+                    "y": 0,
+                    "w": 568,
+                    "h": 260
+                },
+                "sourceSize": {
+                    "w": 568,
+                    "h": 260
+                }
+            },
+            "02": {
+                "frame": {
+                    "x": 1142,
+                    "y": 2,
+                    "w": 568,
+                    "h": 260
+                },
+                "rotated": false,
+                "trimmed": false,
+                "spriteSourceSize": {
+                    "x": 0,
+                    "y": 0,
+                    "w": 568,
+                    "h": 260
+                },
+                "sourceSize": {
+                    "w": 568,
+                    "h": 260
+                }
+            },
+            "03": {
+                "frame": {
+                    "x": 2,
+                    "y": 264,
+                    "w": 568,
+                    "h": 260
+                },
+                "rotated": false,
+                "trimmed": false,
+                "spriteSourceSize": {
+                    "x": 0,
+                    "y": 0,
+                    "w": 568,
+                    "h": 260
+                },
+                "sourceSize": {
+                    "w": 568,
+                    "h": 260
+                }
+            },
+            "04": {
+                "frame": {
+                    "x": 572,
+                    "y": 264,
+                    "w": 568,
+                    "h": 260
+                },
+                "rotated": false,
+                "trimmed": false,
+                "spriteSourceSize": {
+                    "x": 0,
+                    "y": 0,
+                    "w": 568,
+                    "h": 260
+                },
+                "sourceSize": {
+                    "w": 568,
+                    "h": 260
+                }
+            },
+            "05": {
+                "frame": {
+                    "x": 1142,
+                    "y": 264,
+                    "w": 568,
+                    "h": 260
+                },
+                "rotated": false,
+                "trimmed": false,
+                "spriteSourceSize": {
+                    "x": 0,
+                    "y": 0,
+                    "w": 568,
+                    "h": 260
+                },
+                "sourceSize": {
+                    "w": 568,
+                    "h": 260
+                }
+            },
+            "06": {
+                "frame": {
+                    "x": 2,
+                    "y": 526,
+                    "w": 568,
+                    "h": 260
+                },
+                "rotated": false,
+                "trimmed": false,
+                "spriteSourceSize": {
+                    "x": 0,
+                    "y": 0,
+                    "w": 568,
+                    "h": 260
+                },
+                "sourceSize": {
+                    "w": 568,
+                    "h": 260
+                }
+            },
+            "07": {
+                "frame": {
+                    "x": 572,
+                    "y": 526,
+                    "w": 568,
+                    "h": 260
+                },
+                "rotated": false,
+                "trimmed": false,
+                "spriteSourceSize": {
+                    "x": 0,
+                    "y": 0,
+                    "w": 568,
+                    "h": 260
+                },
+                "sourceSize": {
+                    "w": 568,
+                    "h": 260
+                }
+            },
+            "08": {
+                "frame": {
+                    "x": 1142,
+                    "y": 526,
+                    "w": 568,
+                    "h": 260
+                },
+                "rotated": false,
+                "trimmed": false,
+                "spriteSourceSize": {
+                    "x": 0,
+                    "y": 0,
+                    "w": 568,
+                    "h": 260
+                },
+                "sourceSize": {
+                    "w": 568,
+                    "h": 260
+                }
+            },
+            "09": {
+                "frame": {
+                    "x": 2,
+                    "y": 788,
+                    "w": 568,
+                    "h": 260
+                },
+                "rotated": false,
+                "trimmed": false,
+                "spriteSourceSize": {
+                    "x": 0,
+                    "y": 0,
+                    "w": 568,
+                    "h": 260
+                },
+                "sourceSize": {
+                    "w": 568,
+                    "h": 260
+                }
+            },
+            "10": {
+                "frame": {
+                    "x": 572,
+                    "y": 788,
+                    "w": 568,
+                    "h": 260
+                },
+                "rotated": false,
+                "trimmed": false,
+                "spriteSourceSize": {
+                    "x": 0,
+                    "y": 0,
+                    "w": 568,
+                    "h": 260
+                },
+                "sourceSize": {
+                    "w": 568,
+                    "h": 260
+                }
+            },
+            "11": {
+                "frame": {
+                    "x": 1142,
+                    "y": 788,
+                    "w": 568,
+                    "h": 260
+                },
+                "rotated": false,
+                "trimmed": false,
+                "spriteSourceSize": {
+                    "x": 0,
+                    "y": 0,
+                    "w": 568,
+                    "h": 260
+                },
+                "sourceSize": {
+                    "w": 568,
+                    "h": 260
+                }
+            },
+            "12": {
+                "frame": {
+                    "x": 2,
+                    "y": 1050,
+                    "w": 568,
+                    "h": 260
+                },
+                "rotated": false,
+                "trimmed": false,
+                "spriteSourceSize": {
+                    "x": 0,
+                    "y": 0,
+                    "w": 568,
+                    "h": 260
+                },
+                "sourceSize": {
+                    "w": 568,
+                    "h": 260
+                }
+            }
+        },
+        "meta": {
+            "app": "http://www.texturepacker.com",
+            "version": "1.0",
+            "image": "mask-568.png",
+            "format": "RGBA8888",
+            "size": {
+                "w": 1712,
+                "h": 1312
+            },
+            "scale": "1",
+            "length": 12
+        }
+    }
+    </script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.11.4/TweenMax.min.js"></script>
+    <script type="text/javascript" src="switchCar.js"></script>
+    <script type="text/javascript">
+    window.onload = function() {
+        loadImgs('.preload1',function(){});
+        loadImgs('.dot',function(){});
+        var tl = TweenMax;
+        var currentShow = 0,
+            $eControlDots = $('#e-switch-dots'),
+            $eControlDotsTitle = $eControlDots.find('.esd-title li'),
+            $eControlDotsTitleCur = $eControlDotsTitle.eq(currentShow);
+            var c2 = document.getElementById('e-car'),
+                options = {
+                    "maskaniData": maskData,
+                    "carColor": currentShow,
+                    "carImages": {
+                        "frame": {
+                            img: new Image(),
+                            url: "car_blue.png"
+                        },
+                        "0": {
+                            img: new Image(),
+                            url: "car_blue.png"
+                        },
+                        "1": {
+                            img: new Image(),
+                            url: "car_red.png"
+                        },
+                        "2": {
+                            img: new Image(),
+                            url: "car_lightGray.png"
+                        },
+                        "3": {
+                            img: new Image(),
+                            url: "car_white.png"
+                        },
+                        "4": {
+                            img: new Image(),
+                            url: "car_black.png"
+                        },
+                        "5": {
+                            img: new Image(),
+                            url: "car_gray.png"
+                        },
+                        "shadowmaskAni": {
+                            img: new Image(),
+                            url: "mask-ani.png"
+                        }
+                    }
+                },
+                eCar = new Car(c2, options);
+        window.eCar = eCar;
+        var $controlDots = $('#e-switch-dots .esd-dot-area'),
+            $baseControlDots = $('#c-switch-dots .esd-dot-area'),
+            $thisDots = $controlDots.find('.esd-dot'),
+            $thisDotsColor = $eControlDots.find('.dot'),
+            $thisDotsColorTitle = $eControlDots.find('.esd-title'),
+            $slider = {
+                index: currentShow,
+                listAmount: $eControlDotsTitle.length,
+                init: function() {
+
+                },
+                getIndex: function(arrowData) {
+                    var result = $slider.index;
+                    if (arrowData == "next") {
+                        result++;
+                        return result > $slider.listAmount - 1 ? 0 : result;
+                    } else {
+                        result--;
+                        return result < 0 ? $slider.listAmount - 1 : result;
+                    }
+                },
+                addActivedAni: function(nextColor, $thisDots, $controlDots) {
+                    var $this = $thisDots.eq(nextColor),
+                        $dot = $this.find('.dot'),
+                        $dotBg = $this.find('.dot-bg');
+
+                    var $that = $controlDots.find('.esd-dot.actived'),
+                        $thatDotBg = $that.find('.dot-bg');
+
+                    tl.to($dot, .2, {
+                        transformOrigin: "50% 50%",
+                        scale: .75,
+                        onComplete: function() {
+                            tl.to($dot, .2, {
+                                scale: 1
+                            });
+                        }
+                    });
+                    tl.fromTo($dotBg, .2, {
+                        autoAlpha: 1,
+                        transformOrigin: "50% 50%",
+                        scale: .2
+                    }, {
+                        scale: 1.1,
+                        onComplete: function() {
+                            tl.to($dotBg, .2, {
+                                scale: 1
+                            });
+                        }
+                    });
+                    tl.to($thatDotBg, .2, {
+                        scale: 0
+                    });
+                    $slider.index = nextColor;
+                    $thisDots.removeClass('actived').eq($slider.index).addClass('actived');
+                },
+                fadeAni: function(nextColor) {
+                    var currentShowId = (currentShow % 3 + 1),
+                        nextColorId = (nextColor % 3 + 1);
+                    // change color title
+                    tl.to($eControlDotsTitle.eq($slider.index), .3, {
+                        autoAlpha: 0,
+                        onComplete: function() {
+                            tl.to($eControlDotsTitle.eq(nextColor), .3, {
+                                autoAlpha: 1
+                            })
+                        }
+                    });
+                
+
+                    console.log('nextColor:::::', currentShow, nextColor);
+
+                }
+            };
+
+        $thisDots.on('click', function(event) {
+            // if(isLock) return;
+            currentShow = $slider.index;
+            event.preventDefault();
+            var $this = $(this);
+            var nextColor = $this.data('color');
+            if (!(nextColor != eCar.carColor && eCar.status != "changing")) {
+                return false;
+            }
+            colorChandge = true;
+            eCar.switchColor(nextColor);
+            $slider.fadeAni(nextColor);
+
+            $slider.addActivedAni(nextColor, $thisDots, $controlDots);
+        });
+
+        function dotsIn() {
+            tl.set([$eControlDots, $eControlDotsTitleCur], {
+                autoAlpha: 1
+            });
+            for (var i = 0, length = $thisDotsColor.length; i < length; i++) {
+                tl.fromTo($thisDotsColor[i], .3, {
+                    autoAlpha: 1,
+                    transformOrigin: "50% 50%",
+                    scale: 0
+                }, {
+                    scale: 1,
+                    ease: Power2.easeInOut,
+                    delay: 0.07 * i
+                })
+            };
+
+            tl.fromTo($thisDotsColorTitle, .3, {
+                autoAlpha: 0
+            }, {
+                autoAlpha: 1,
+                delay: .7
+                    /*,
+                                    onComplete: showCursor*/
+            });
+            $slider.addActivedAni(window.eCar.carColor, $thisDots, $controlDots);
+        }
+
+        function loadImgs(preload, callBack) {
+            var imgs = document.querySelectorAll(preload),
+                imgArray = [];
+            for (i = 0; i < imgs.length; ++i) {
+                imgArray.push(imgs[i]);
+            }
+            loadImages = preloadImages(imgArray);
+            loadImages.done(callBack);
+        }
+
+        function preloadImages(arr) {
+            var newimages = [],
+                loadedimages = 0,
+                imgLen = 0,
+                imgPath = "images/";
+
+            var postaction = function() {};
+            arr = (typeof arr != "object") ? [arr] : arr;
+            imgLen = arr.length;
+
+            function imageloadpost() {
+                loadedimages++;
+                ratio = loadedimages / imgLen;
+                if (arr[loadedimages - 1] === null) {
+                    log('nothing here');
+                }
+                if (loadedimages == imgLen) {
+                    postaction(newimages);
+                    for (var j = 0, len = imgLen; j < len; j++) {
+                        $(arr[j]).append(newimages[j]);
+                        $(arr[j]).removeAttr("data-source");
+                    }
+                }
+            }
+            var img;
+            for (var i = 0, len = imgLen; i < len; i++) {
+                img = new Image();
+                newimages.push(img);
+
+                img.addEventListener("load", function() {
+                    imageloadpost();
+                });
+                img.addEventListener("error", function() {
+                    imageloadpost();
+                });
+                if (arr[i].getAttribute('data-source') !== null) {
+                    img.src = imgPath + arr[i].getAttribute('data-source');
+                    img.alt = "";
+                }
+            }
+            return {
+                done: function(f) {
+                    postaction = f || postaction;
+                }
+            };
+        }
+    }
+    </script>
+</body>
+
+</html>

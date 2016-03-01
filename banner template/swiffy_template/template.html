@@ -1,0 +1,224 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1"/> 
+	<!-- sizmek platform script -->
+	<!--<script type="text/javascript" src="http://ds.serving-sys.com/BurstingScript/EBLoader.js"></script>-->
+
+	<!-- doubleclick platform script -->
+	<!--<script type="text/javascript" src="http://s0.2mdn.net/ads/studio/Enabler.js"></script>-->
+    <title>Standard Banner</title>
+    <style>
+    	html, body{
+    		width: 100%; 
+    		height: 100%
+    	}
+    	body{
+  			margin:0px;
+		}
+
+		#ad{
+			-moz-user-select: -moz-none;
+   			-khtml-user-select: none;
+   			-webkit-user-select: none;
+   			-ms-user-select: none;
+   			user-select: none;
+   		}
+   		/*修改几个热区的位置,大小*/
+   		.bg{
+   			position: absolute;
+   			width: 728px;  /*宽度*/
+   			height: 90px;  /*高度*/
+   			top: 0px;      /*Y轴*/
+   			left: 0px;     /*X轴*/
+   			background: #123456;
+        cursor: pointer;
+
+   			opacity: 0;    /*在调整大小的时候可以把透明度设置为1,方便调整*/
+   		}
+   		.cta{
+   			position: absolute;
+    		width: 100px;   /*宽度*/
+    		height: 21px;   /*高度*/
+    		top: 41px;      /*Y轴*/
+    		left: 412px;    /*X轴*/
+    		background: #654321;
+        cursor: pointer;
+
+    		opacity: 0;     /*在调整大小的时候可以把透明度设置为1,方便调整*/
+   		}
+      /*没有replay按钮的时候把这段删除*/
+   		.replay{
+   			position: absolute;
+    		width: 18px;    /*宽度*/
+    		height: 20px;   /*高度*/
+    		top: 0;         /*Y轴*/
+    		left: 668px;    /*X轴*/
+    		background: black;
+        cursor: pointer;
+
+    		opacity: 0;     /*在调整大小的时候可以把透明度设置为1,方便调整*/
+		}
+   		}
+    </style>
+  </head>
+  <body style="margin: 0; overflow: hidden">
+  	<!-- 这里需要把宽度高度改成Banner的宽高 -->
+    <div id="swiffycontainer" style='width:728px;height:90px'>
+    </div>
+
+    <!-- 这里对应Flash里面的几个热区 -->
+    <!-- BG 热区 -->
+    <div class='bg' id='bg'> 
+    	<!-- CTA 热区 -->
+    	<div class='cta' id='cta'></div>
+    </div>
+    <!-- replay 热区 -->
+    <!-- 没有replay按钮的时候把这段删除 -->
+    <div class='replay' id='replay'></div>
+    
+    <script>
+    //DoubleClick Platform Start Script
+    //-------------------------------------------------------
+    /*window.onload = function() {
+    	if (Enabler.isInitialized()) {
+    		enablerInitHandler();
+    	} else {
+    		Enabler.addEventListener(studio.events.StudioEvent.INIT, enablerInitHandler);
+    	}
+    }
+
+    function enablerInitHandler() {
+		if (Enabler.isPageLoaded()) {
+			pageLoadedHandler();
+		} else {
+			Enabler.addEventListener(studio.events.StudioEvent.PAGE_LOADED,pageLoadedHandler);
+		}
+	}*/
+
+	//Sizmek Platform Start Script
+    //-------------------------------------------------------
+    /*window.onload = function() {
+    	if (!EB.isInitialized()) {
+    		EB.addEventListener(EBG.EventName.EB_INITIALIZED, startAd);
+    	} else {
+    		startAd();
+    	}
+    }
+
+    function startAd() {
+    	pageLoadedHandler();
+    }*/
+    //Local Start Script
+    //-------------------------------------------------------
+    window.onload = function() {
+    	pageLoadedHandler();
+    }
+
+
+    //热区点击,平台版本发送tracking,本地版本则链接出去
+    //------------------------------------------------------
+    function bgClick(e){
+      if(!e) e = window.event;
+    	if((e.target || e.srcElement).id == 'bg'){
+    		console.log('bgclick');
+
+        //以下根据平台选择一项
+    		//Enabler.exit('Background_Exit');  //DC clickthrough
+    		//EB.clickthrough('BG');            //Sizmek clickthrough
+    		//window.open("", "_blank");          //Local clickthrough
+    	}
+    	stage.setFlashVars('toEnd=true');
+    }
+    function ctaClick(e){
+      if(!e) e = window.event;
+    	if((e.target || e.srcElement).id == 'cta'){
+    		console.log('ctaclick');
+
+        //以下根据平台选择一项
+    		//Enabler.exit('CTA');            //DC clickthrough
+    		//EB.clickthrough('CTA');         //Sizmek clickthrough
+    		//window.open("", "_blank");        //Local clickthrough
+    	}
+    	stage.setFlashVars('toEnd=true');
+    }
+    //整体roll over 
+    //------------------------------------------------------
+    function ctaOver(e){
+      if(!e) e = window.event;
+    	if((e.target || e.srcElement).id == 'bg'){
+    		stage.setFlashVars('cta_over=true');
+    	}
+    }
+    function ctaOut(e){
+      if(!e) e = window.event;
+    	if((e.target || e.srcElement).id == 'bg'){
+    		stage.setFlashVars('cta_over=false');
+    	}
+    }
+    //replay 功能
+    //没有replay按钮的时候把这段删除(replayClick)
+    //------------------------------------------------------
+    function replayClick(e){
+      if(!e) e = window.event;
+    	if((e.target || e.srcElement).id == 'replay'){
+    		console.log('replayclick');
+    		stage.setFlashVars('toEnd=false');
+    		stage.setFlashVars('replay=true');
+    		setTimeout(function(){
+    			stage.setFlashVars('replay=false');
+    		},100);
+    	}
+    }
+    //replay roll over
+    //没有replay按钮的时候把这段删除(replayOver,replayOut)
+    //------------------------------------------------------
+    function replayOver(e){
+    	stage.setFlashVars('replay_over=true');
+    }
+    function replayOut(e){
+    	stage.setFlashVars('replay_over=false');
+    }
+    
+    //https://www.gstatic.com/swiffy/v7.2.0/
+    function pageLoadedHandler() {
+      loadJs('https://www.gstatic.com/swiffy/v7.3.0/runtime.js', function() {
+        loadJs('data.js', function() {
+          setClickTag();
+          stage = new swiffy.Stage(document.getElementById("swiffycontainer"),
+            swiffyobject, {});
+          stage.start();
+        });
+      });
+    }
+    function setClickTag(){
+    	addEvent(document.getElementById('bg'),'click',bgClick);
+    	addEvent(document.getElementById('cta'),'click',ctaClick);
+
+    	addEvent(document.getElementById('bg'),'mouseenter',ctaOver);
+    	addEvent(document.getElementById('bg'),'mouseleave',ctaOut);
+
+      //没有replay按钮的时候把这段删除
+    	addEvent(document.getElementById('replay'),'click',replayClick);
+    	addEvent(document.getElementById('replay'),'mouseenter',replayOver);
+    	addEvent(document.getElementById('replay'),'mouseleave',replayOut);
+    }
+    function addEvent(target,eventName,callback) {
+    	if (window.attachEvent) {
+    		target.attachEvent('on'+eventName, callback);
+    	} else if (window.addEventListener) {
+    		target.addEventListener(eventName, callback, false);
+    	}
+    }
+    function loadJs(file, complete) {
+    	var extJavascript = document.createElement('script');
+    	extJavascript.setAttribute('type', 'text/javascript');
+    	extJavascript.setAttribute('src', file);
+    	document.getElementsByTagName('head')[0].appendChild(extJavascript);
+    	extJavascript.onload = complete;
+    };
+    </script>
+  </body>
+</html>

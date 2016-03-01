@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+    <title>CardFlip</title>
+    <meta name="description" content="CardFlip" />
+    <meta name="author" content="Tallulah" />
+    <style rel='stylesheet' type="text/css">
+    /* Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        box-sizing: border-box;
+        /*-webkit-backface-visibility: hidden;*/
+        perspective: 600;
+        -webkit-perspective :600;
+    }
+    img ,span{
+        display: block;
+    }
+    .container {
+        text-align: center;
+        position: absolute;
+        left: 100px;
+        top: 100px;
+        width: 500px;
+        height: 500px;
+    }
+    /* Skeleton */
+    .flip {
+        position: relative;
+        /*float: left;*/
+        width: 220px;
+        height: 320px;
+        perspective: 600;
+        -webkit-perspective :600;
+    }
+    .number {
+        z-index: 1;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+    }
+    .up,.down{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 160px;
+        z-index: 2;
+        transform-style: preserve-3d;
+        -webkit-transform-style: preserve-3d;
+    } 
+    .down{
+        left: 0;
+        top: 160px;
+        z-index: 1;
+    }
+    .front,.back{
+        width: 100%;
+        height: 160px;
+        position: absolute;
+        top:0;
+        left:0;
+        background: #72bc42;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+    }
+    .front{
+        z-index: 2;
+        -webkit-transform: rotateX( 0deg );
+    }
+    .back{
+        z-index: 1;
+        /*left: 220px;*/
+        -webkit-transform: rotateX( 180deg );
+    }
+    .up{
+        -webkit-transform-origin: 0 100%;
+        -webkit-transition: -webkit-transform 1.5s;
+        /*-webkit-transform: rotateX(-110deg);*/
+    }
+    </style>
+    <script src="jquery-1.8.1.min.js"></script>
+    <script type="text/javascript">
+    $(function() {
+        setTimeout(function(){
+            $('.one .up').css({'-webkit-transform':'rotateX(-180deg)'});
+        },2000);
+
+        setTimeout(function(){
+            $('.one').css({'opacity':"0"});
+            $('.two .up').css({'-webkit-transform':'rotateX(-180deg)'});
+        },4000);
+
+        setTimeout(function(){
+            $('.two').css({'opacity':"0"});
+            $('.three .up').css({'-webkit-transform':'rotateX(-180deg)'});
+        },6000);
+    })
+    </script>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="flip">
+            <div class='four number'>
+                <span class='up'>
+                    <span class='front'><img src="number5_1.png"></span>
+                    <span class='back'><img src="number5_2.png"></span>
+                </span>
+                <span class='down'>
+                    <span class='front'><img src="number5_2.png"></span>
+                </span>
+            </div>
+            <div class='three number'>
+                <span class='up'>
+                    <span class='front'><img src="number5_1.png"></span>
+                    <span class='back'><img src="number5_2.png"></span>
+                </span>
+                <span class='down'>
+                    <span class='front'><img src="number5_2.png"></span>
+                </span>
+            </div>
+            <div class='two number'>
+                <span class='up'>
+                    <span class='front'><img src="number7_1.png"></span>
+                    <span class='back'><img src="number5_2.png"></span>
+                </span>
+                <span class='down'>
+                    <span class='front'><img src="number7_2.png"></span>
+                </span>
+            </div>
+            <div class='one number'>
+                <span class='up'>
+                    <span class='front'><img src="number5_1.png"></span>
+                    <span class='back'><img src="number7_2.png"></span>
+                </span>
+                <span class='down'>
+                    <span class='front'><img src="number5_2.png"></span>
+                </span>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

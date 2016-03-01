@@ -1,0 +1,174 @@
+<html>
+
+<head>
+    <title>HERO 3D</title>
+    <style type="text/css">
+    /* Hero image */
+    
+    .hero {
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+        pointer-events: none;
+    }
+    
+    .hero > div {
+        background: #212121 url(bg.jpg) no-repeat 50% 0;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+    }
+    
+    .hero__back--static,
+    .hero__front {
+        -webkit-transition: -webkit-transform 0.5s, opacity 0.5s;
+        transition: transform 0.5s, opacity 0.5s;
+        -webkit-transform-origin: 50% 60px;
+        transform-origin: 50% 60px;
+        -webkit-transition-timing-function: cubic-bezier(0.6, 0, 0.4, 1);
+        transition-timing-function: cubic-bezier(0.6, 0, 0.4, 1);
+    }
+    
+    .hero__back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .hero__back--mover {
+        opacity: 0.7;
+        -webkit-transition: -webkit-transform 0.4s, opacity 0s 0.5s;
+        transition: transform 0.4s, opacity 0s 0.5s;
+    }
+    
+    .move-items .hero__back--mover {
+        opacity: 0;
+        -webkit-transition-delay: 0s;
+        transition-delay: 0s;
+    }
+    
+    .hero__front {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        margin: 0 0 0 -391px;
+        width: 782px;
+        height: 782px;
+        border-radius: 50%;
+        opacity: 0;
+    }
+    
+    .move-items .hero__back--static {
+        opacity: 0;
+        -webkit-transform: scale3d(0.15, 0.15, 1);
+        transform: scale3d(0.15, 0.15, 1);
+    }
+    
+    .move-items .hero__front {
+        opacity: 1;
+        -webkit-transition-duration: 0.5s, 0s;
+        transition-duration: 0.5s, 0s;
+        -webkit-transform: scale3d(0.15, 0.15, 1);
+        transform: scale3d(0.15, 0.15, 1);
+    }
+    
+    .hero__focus {
+        margin-left: -78px;
+        left: 50%;
+        position: absolute;
+        width: 5px;
+        height: 5px;
+        background: rgba(255, 66, 66, 0.7);
+        border-radius: 50%;
+        box-shadow: 0 0 10px rgba(255, 66, 66, 0.9);
+        top: 209px;
+        display: none;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="hero">
+        <div class="hero__back hero__back--static"></div>
+        <div class="hero__back hero__back--mover"></div>
+        <div class="hero__front"></div>
+    </div>
+    <script src='modernizr.custom.js'></script>
+    <script type="text/javascript">
+    (function() {
+        var bodyEl = document.body,
+            docElem = window.document.documentElement,
+            support = {
+                transitions: Modernizr.csstransitions
+            },
+            // transition end event name
+            transEndEventNames = {
+                'WebkitTransition': 'webkitTransitionEnd',
+                'MozTransition': 'transitionend',
+                'OTransition': 'oTransitionEnd',
+                'msTransition': 'MSTransitionEnd',
+                'transition': 'transitionend'
+            },
+            transEndEventName = transEndEventNames[Modernizr.prefixed('transition')],
+            onEndTransition = function(el, callback) {
+                var onEndCallbackFn = function(ev) {
+                    if (support.transitions) {
+                        if (ev.target != this) return;
+                        this.removeEventListener(transEndEventName, onEndCallbackFn);
+                    }
+                    if (callback && typeof callback === 'function') {
+                        callback.call(this);
+                    }
+                };
+                if (support.transitions) {
+                    el.addEventListener(transEndEventName, onEndCallbackFn);
+                } else {
+                    onEndCallbackFn();
+                }
+            },
+
+            imghero = document.querySelector('.hero__back--mover'),
+            canOpen = true,
+            canMoveHeroImage = true,
+            isFirefox = typeof InstallTrigger !== 'undefined',
+            win = {
+                width: window.innerWidth,
+                height: window.innerHeight
+            };
+
+        function scrollY() {
+            return window.pageYOffset || docElem.scrollTop;
+        }
+
+        function throttle(fn, delay) {
+            var allowSample = true;
+
+            return function(e) {
+                if (allowSample) {
+                    allowSample = false;
+                    setTimeout(function() {
+                        allowSample = true;
+                    }, delay);
+                    fn(e);
+                }
+            };
+        }
+
+        window.addEventListener('mousemove', throttle(function(ev) {
+            if (!canMoveHeroImage) return false;
+            var xVal = -1 / (win.height / 2) * ev.clientY + 1,
+                yVal = 1 / (win.width / 2) * ev.clientX - 1,
+                transX = 20 / (win.width) * ev.clientX - 10,
+                transY = 20 / (win.height) * ev.clientY - 10,
+                transZ = 100 / (win.height) * ev.clientY - 50;
+
+            imghero.style.WebkitTransform = 'perspective(1000px) translate3d(' + transX + 'px,' + transY + 'px,' + transZ + 'px) rotate3d(' + xVal + ',' + yVal + ',0,2deg)';
+            imghero.style.transform = 'perspective(1000px) translate3d(' + transX + 'px,' + transY + 'px,' + transZ + 'px) rotate3d(' + xVal + ',' + yVal + ',0,2deg)';
+        }, 100));
+    })();
+    </script>
+</body>
+
+</html>

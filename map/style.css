@@ -1,0 +1,210 @@
+/*============= expanded map =============*/
+.expanded-map {
+  width: 670px;
+  height: 1024px;
+  position: absolute;
+  top: 0;
+  left: 768px;
+  z-index: 100;
+  -webkit-transform: translate3d(-670px, 0px, 0px);
+}
+.expanded-map .map-header {
+  width: 100%;
+  height: 82px;
+  background: #FFF;
+  position: relative;
+}
+.expanded-map .map-header .back-to-mainpage {
+  width: 103px;
+  height: 40px;
+  position: absolute;
+  top: 20px;
+  left: 26px;
+  cursor: pointer;
+}
+.expanded-map .map-header .map_title {
+  position: absolute;
+  top: 95px;
+  left: 40px;
+  width: 403px;
+  height: 33px;
+}
+.expanded-map .map-header .map_title img {
+  width: 100%;
+  height: 100%;
+}
+.expanded-map .map-header .map_title_line {
+  position: absolute;
+  top: 142px;
+  left: 40px;
+  width: 528px;
+  height: 1px;
+  background: #F5F5F5;
+}
+.expanded-map article {
+  position: absolute;
+  width: 655px;
+  height: 942px;
+  top: 82px;
+  /* force hardware acceleration for smoother scrolling */
+
+}
+.expanded-map article .map-content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.expanded-map article .map-content .map-detail {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.expanded-map article ::-webkit-input-placeholder {
+  color: black;
+}
+.expanded-map article .search {
+  position: absolute;
+  top: 80px;
+  left: 40px;
+  width: 608px;
+}
+.expanded-map article .search-btn {
+  position: absolute;
+  width: 120px;
+  height: 40px;
+  top: 0;
+  left: 482px;
+  cursor: pointer;
+  background-image: url(images/map_search_btn.png);
+  background-size: 120px 40px;
+}
+.expanded-map article .zip {
+  width: 447px;
+  height: 42px;
+  background-color: #f5f5f5;
+  border: 0 solid;
+  padding: 0 0 0 20px;
+  /*margin: 20px 36px 20px 36px;*/
+
+  font-size: 18px;
+}
+.expanded-map article .location-ico {
+  position: absolute;
+  top: 8px;
+  right: 150px;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  background: url(images/current_location.png);
+}
+.expanded-map article #map-canvas {
+  position: absolute;
+  top: 140px;
+  width: 100%;
+  height: 391px;
+}
+.expanded-map article .map_results {
+  position: absolute;
+  top: 564px;
+  left: 0;
+  width: 100%;
+  height: 300px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.expanded-map article .map_result_des {
+  position: absolute;
+  display: block;
+  top: 0px;
+  left: 37px;
+  width: 467px;
+  height: 16px;
+}
+.expanded-map article .map_result_des img {
+  width: 100%;
+  height: 100%;
+}
+.expanded-map article .marker-content {
+  overflow: hidden;
+  white-space: nowrap;
+}
+.expanded-map article .marker-title {
+  display: block;
+  font-weight: bold;
+}
+.expanded-map article .marker-copy {
+  display: block;
+}
+.expanded-map article .labels {
+  width: 13px;
+  text-align: center;
+  color: #72bc42;
+  /*font-family: "Lucida Grande", "Arial", sans-serif;*/
+
+  font-weight: bold;
+}
+.expanded-map article .map_result_line {
+  position: absolute;
+  width: 1px;
+  height: 320px;
+  left: 312px;
+  top: 69px;
+  background: #F5F5F5;
+}
+.expanded-map article .list-items {
+  position: absolute;
+  display: block;
+  top: 43px;
+  width: 670px;
+  height: 400px;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  list-style: none;
+}
+.expanded-map article .list-items > * {
+  -webkit-transform: translateZ(0px);
+}
+.expanded-map article .list-item {
+  margin: 0 0 30px 0;
+  width: 50%;
+  float: left;
+  height: 102px;
+}
+.expanded-map article .list-marker {
+  position: absolute;
+  color: #72bc42;
+  width: 23px;
+  height: 32px;
+  font-size: 11px;
+  padding: 4px 0 0 8px;
+  background: url(images/marker.png) no-repeat;
+  background-size: 23px 32px;
+}
+.expanded-map article .list-title {
+  display: block;
+  font-size: 18px;
+  font-weight: bold;
+  margin-left: 40px;
+}
+.expanded-map article .list-copy {
+  display: block;
+  font-size: 13px;
+  color: #333;
+  margin-left: 40px;
+}
+.expanded-map article .other {
+  margin-top: 5px;
+}
+.expanded-map article .line {
+  margin: 8px;
+}
+.expanded-map article .location,
+.expanded-map article .directions {
+  color: #91ce59;
+  cursor: pointer;
+}
+/*============= end of expanded map =============*/

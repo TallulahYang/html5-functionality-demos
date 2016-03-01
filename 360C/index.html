@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>360 rotate</title>
+    <style>
+        #fullview {
+            width: 300px;
+            height: 175px;
+            position: absolute;
+            background-image: url(images/fullview.jpg);
+            background-size: 300px 6300px;
+        }
+
+        #fullview-2 {
+            width: 300px;
+            height: 175px;
+            position: absolute;
+            top: 400px;
+            /*
+            background-image: url(images/fullview.jpg);
+            background-size: 300px 6300px;*/
+        }
+        #fullview-2 img {
+            position: absolute;
+            width: 100%;
+            height: auto;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="fullview" class="fullview" data-img="fullview" data-width="300" data-height="175" data-frame="36" data-render="div" data-step="5"></div>
+
+        <div id="fullview-2" class="fullview-2" data-img="img" data-width="640" data-height="426" data-frame="36" data-render="li" data-step="5"></div>
+    </div>
+    
+    <script src="scripts/ReelRotate.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+</html>

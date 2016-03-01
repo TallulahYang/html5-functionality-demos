@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<!--[if IE 9 ]>        <html class="no-js lt-ie10 ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <title>banner</title>
+    <meta name="viewport" content="width=device-width,initial-scale = 1.0,maximum-scale = 1.0, user-scalable=no">
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        -webkit-tap-highlight-color: rgba(255, 0, 0, 0);
+    }
+    /*============= containers CSS =============*/
+
+    .container {
+        width: 300px;
+        height: 250px;
+        overflow: hidden;
+        position: absolute;
+        cursor: pointer;
+        opacity: 0;
+    }
+    .wrapper-1440 {
+        position: absolute;
+        background-color: transparent;
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+    .preload img {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        visibility: hidden;
+    }
+    .main {
+        width: 100%;
+        height: 100%;
+    }
+    img {
+        display: block;
+         -webkit-transform:translate3d(0,0,0);
+            -moz-transform:translate3d(0,0,0);
+            -ms-transform:translate3d(0,0,0);
+            transform:translate3d(0,0,0);
+    }
+    .actor {
+        position: absolute;
+    }
+    .actor.preload img {
+        visibility: visible!important;
+    }
+    .seqWrapper .actor {
+        overflow: hidden;
+        position: absolute;
+    }
+    .seqWrapper {
+        position: absolute;
+    }
+    .mainl0{
+        z-index: 3000;
+    }
+    .cta{
+        -ms-transform:translate3d(0,0,0);
+    }
+    /*=============line set================*/
+    .line {position: absolute;z-index: 2001;}
+    .left, .right {width: 1px;height: 100%;background: #000000;}
+    .top, .bottom {width: 100%;height: 1px;background: #000000;}
+    .notS4 .line {-webkit-transform: translate3d(0, 0, 0);}
+    .S3 .left, .S3 .right {width: 2px;}
+    .S3 .top, .S3 .bottom {height: 2px;}
+    .S3 .top {top: -1px;}
+    .S3 .left {left: -1px;}
+    .S3 .right {right: -1px;}
+    .S3 .bottom {bottom: -1px;}
+    .left, .top {top: 0;left: 0;}
+    .right {top: 0;right: 0;}
+    .bottom {bottom: 0}
+    /*=============line end================*/
+    </style>
+    <script type="text/javascript">
+    var clickTag='http://underarmour.com/';
+        clickTag1 ='http://underarmour.com/';
+    </script>
+</head>
+
+<body>
+    
+    <div class="container">
+        <div class="top line"></div>
+        <div class="right line"></div>
+        <div class="bottom line"></div>
+        <div class="left line"></div> 
+        <div class="wrapper-1440">
+        <div class="cta">
+						<div class="ctal2 preload"  data-source="cta.png"></div>
+						<div class="ctal1 preload"  data-m="ctal0" data-source="light.png"></div>
+						<div class="ctal0 preload"  data-source="mask.png"></div>
+</div>
+<div class="main">
+						<div class="mainl8 preload"  data-source="bg_1.jpg"></div>
+						<div class="mainl7 preload"  data-source="bg.jpg"></div>
+						<div class="mainl9 preload"  data-source="legal.png"></div>
+						<div class="mainl6 preload"  data-source="black.png"></div>
+						<div class="mainl5 preload"  data-source="txt_1.png"></div>
+						<div class="mainl4 preload"  data-source="logo.png"></div>
+						<div class="mainl3 preload"  data-source="line.png"></div>
+						<div class="mainl2 preload"  data-m="mainl1" data-source="txt_2.png"></div>
+						<div class="mainl1 preload"  data-source="msk.png"></div>
+						<div class="mainl00 preload"  data-source="msk.png"></div>
+						<div class="mainl0 preload"  data-source="undefined"></div>
+</div>
+
+        </div>
+
+    </div>
+    <script type="text/javascript">
+    var CEase=function(){function r(r){var e=r.length,n;if(1==e)n=r.slice();else{n=[{x:0,y:0}];for(var a=1;e>a;a+=2)n.push({x:r[a-1],y:r[a]});n.push({x:1,y:0})}var f=function(r,e,a,f){if(0>=f)return 0/0;if(0>=r)return e;var u=r/f;if(u>=1)return e+a;var i=n.length;if(1==i){var h=n[0];return h?(h>1?h=1:-1>h&&(h=-1),0>h?a*u*(u*-h+(1+h))+e:a*u*((2-u)*h+(1-h))+e):a*u+e}if(0>=u)return e;n[0].y=e,n[i-1].y=e+a;for(var v=[n[0],n[1],n[2],n[3]],x=[v],s=3;s<n.length-3;s+=3)x.push([n[s],n[s+1],n[s+2],n[s+3]]);var o=v;if(i>=5)for(var y=0;y<x.length;y+=1){var l=x[y];if(l[0].x<=u&&u<=l[3].x){o=l;break}}var c=t(o,u);return c};return f}function t(r,t,n){var a=r[0],f=r[1],u=r[2],i=r[3];if(a.x<i.x){if(t<=a.x+1e-16)return a.y;if(t>=i.x-1e-16)return i.y}else{if(t>=a.x+1e-16)return a.y;if(t<=i.x-1e-16)return i.y}n||(n=[-a.x+3*f.x-3*u.x+i.x,3*a.x-6*f.x+3*u.x,-3*a.x+3*f.x,a.x]);var h=e(n[0],n[1],n[2],n[3]-t),v=0/0;if(0==h.length)v=0;else if(1==h.length)v=h[0];else for(var x in h)if(0<=h[x]&&h[x]<=1){v=h[x];break}return isNaN(v)?0/0:(v*v*(i.y-a.y)+3*(1-v)*(v*(u.y-a.y)+(1-v)*(f.y-a.y)))*v+a.y}function e(r,t,e,n){var a,f;if(!r){var u=[];if(!t)return e?(u[0]=-n/e,u):[];a=e*e-4*t*n;var i=a>0?1:0>a?-1:0;return 0>i?[]:(i?(u[0]=u[1]=-e/(2*t),f=Math.sqrt(a)/(2*t),u[0]-=f,u[1]+=f):u[0]=-e/(2*t),u)}1!=r&&(t/=r,e/=r,n/=r),a=(t*t-3*e)/9;var h=a*a*a,v=(2*t*t*t-9*t*e+27*n)/54,x=h-v*v;if(x>=0){if(!a)return[0];var s=Math.acos(v/Math.sqrt(h)),o=Math.sqrt(a),y=-2*o*Math.cos(s/3)-t/3,l=-2*o*Math.cos((s+2*Math.PI)/3)-t/3,c=-2*o*Math.cos((s+4*Math.PI)/3)-t/3;return[y,l,c]}f=Math.pow(Math.sqrt(-x)+Math.abs(v),1/3);var M=v>0?1:0>v?-1:0,g=-M*(f+a/f)-t/3;return[g];return[]}var n={},a={};return n.getFun=function(t){var e="",n=t.length,f;for(f=0;n>f;f+=1)e=e.concat(t[f]+"");return 0==e.length?null:(a[e]||(a[e]=r(t)),a[e])},n}();
+        var $TL=function(){function l(e){for(var t=1;t<arguments.length;t++)o[arguments[t]]=e}function c(e){i[e]=0}function h(e,t){i[e]=t}function p(){TweenMax.delayedCall(r,p);for(var e in n)o[e]=="play"||o[e]=="loop"?i[e]++:o[e]=="toEnd"?i[e]<s[e]-1&&i[e]++:o[e]=="toStart"&&i[e]>10&&i[e]--}function d(s,l,c,h,d){for(var v=1;v<c.length;v++)e[v]=c[v]=="lin"?Linear.easeNone:new Ease(CEase.getFun(c[v]));imageInfos=l;seqs=h;svgs=d;t=s;$(".preload").each(function(){var e=$(this),t=e.data("source"),s=e.data("m"),l=e.attr("class").split(" "),c=l[0],h=t.replace("img/","").replace(".png","").replace(".jpg","").replace("SEQ","").replace("002x","");e.data("source","");var d;if(t&&seqs[h]&&o[c]){if(r==0){r=1/fps;p()}trace("addd........",h,c);n.have=!0;n[c]=seqs[h];i[c]=0;u[c]=[n[c][0][4],n[c][0][5]];e.wrap("<div class='seqWrapper'></div>");t=t.replace("img/SEQ","img/").replace("img/","img/SEQ");if(o[c]=="hover"){e.on("mouseover",function(e){o[c]="toEnd"});e.on("mouseout",function(e){o[c]="toStart"});e.on("click",function(e){o[c]="toStart"})}}if(f[c])return;if(s){$("."+s).append(e[0]);a[c]=s;f[s]=!0;$("."+s).css("overflow","hidden")}e.append("<img src='"+t+"' alt=''>")})}function v(e,t,n,r,i){return e[i[0]]}function m(e,r,i,o){function B(e,t){var n=y(u,l,e,t,m);for(var r=0;r<l.length;r++){var i=l[r];c[i].animater(h,c[i],n[i])}}function j(e){isNaN(e)||T.push(e);for(var t=0;t<T.length;t++)h.addPause(T[t])}function F(e){isNaN(e)?h.pause():h.pause(e)}function I(){return h.time()}function q(e){h.reverse(e)}function R(e,t){t&&B(t);h.play(e)}function U(e){}function z(){return h.paused()}function W(){h.progress(1)}function X(e){return c[e].matrix}function J(e){V=e}var u={},l=[],c={},h=new TimelineMax({repeat:i}),p=0,d=new TimelineMax,m=[],y=v,E="play",x=-1,T=[];for(var N=1;N<e.length;N++){var C=e[N],k=C[0];m.push(k);u[k]={};for(var L=1;L<C.length;L++){var A=C[L].shift(),O=t[A],M=n[O[0]],_=M?imageInfos[O[1][1]]:imageInfos[O[1][0]];O=O[0];var D=r.find("."+O);if(D.length==0)continue;if(!c[O]){D.hasClass("forceCSS")&&(_.forceCSS=!0);D.addClass("actor");l.push(O);D.sx=1;D.sy=1;D.movedOut=!0;D.totalFrames=M?M.length:0;s[O]=D.totalFrames;D.alphaValue=-1;var P=$("."+O).children();c[O]={precise:o,name:O,div:D,image:P,mask:a[O],isMask:f[O],imageInfo:_,animater:f[O]?b:g,seq:null};_.m=_.x*_.w;_.n=_.y*_.h;_.seq=M;if(!f[O]){P.css("left",_.m);P.css("top",_.n);P.css("width",_.w);P.css("height",_.h);P.attr("viewBox","0 0 "+_.w+" "+_.h);TweenLite.set(P,{autoAlpha:0});d.add(TweenMax.to(D,99999,{onUpdate:w,onUpdateParams:[O,c],overwrite:!1}),0)}}for(var H=0;H<C[L].length;H++)S(C[L][H-1],C[L][H]);u[k][O]=C[L]}}for(N=0;N<l.length;N++)c[l[N]].mask=c[c[l[N]].mask];var V;e={timeScale:U,resize:B,addPause:j,pause:F,play:R,paused:z,toEnd:W,time:I,setEndCallBack:J,reverse:q,getPosByID:X};return e}function g(t,n,r){var i=0,s=0,o,u,a=0,f=0,l=0,c=0,h=n.name,p=n.matrix={a:-1,x:0,y:0,sx:0,sy:0,o:0},d=n.imageInfo.w,v=n.imageInfo.h;if(!r)return;for(var m=0;m<r.length;m++){var g=r[m];s=g[0]/fps;if(isNaN(s))continue;s=T(s);var y=g[3],b=g[4];if(o&&u){t.add(TweenLite.fromTo(p,s-i,{a:u[5],x:u[1],y:u[2],sx:u[3],sy:u[4],o:u[6]},{a:g[5],x:g[1],y:g[2],sx:g[3],sy:g[4],o:g[6],roundProps:n.precise?"":"x,y",onUpdateParams:[p],overwrite:!1,ease:e[o]}),i);p.a=0}else t.add(TweenLite.to(p,1e-5,{a:g[5],x:g[1],y:g[2],sx:g[3],sy:g[4],o:g[6],roundProps:n.precise?"":"x,y",onUpdateParams:[p],overwrite:!1}),s);o=g[7];i=s;u=g}}function y(e){trace(e.x,e.y,e.sx,e.sy,e.a)}function b(t,n,r){var i=0,s=0,o,u,a=n.matrix={x:0,y:0,w:0,h:0};if(!r)return;for(var f=0;f<r.length;f++){var l=r[f];s=l[0]/fps;if(isNaN(s))continue;s=T(s);var c=n.imageInfo.w,h=n.imageInfo.h;if(o&&u){t.add(TweenLite.fromTo(a,s-i,{x:u[1],y:u[2],w:u[3]*c,h:u[4]*h},{x:l[1],y:l[2],w:l[3]*c,h:l[4]*h,roundProps:"x,y,w,h",overwrite:!1,ease:e[o]}),i);a.a=0}else t.add(TweenLite.to(a,1e-5,{x:l[1],y:l[2],w:l[3]*c,h:l[4]*h,roundProps:"x,y,w,h",overwrite:!1}),s);o=l[7];i=s;u=l}}function w(e,t){var n=t[e],r=n.matrix,s=n.div,o=n.imageInfo,a=n.mask,f=n.image;if(!r||r.a<=0){i[e]=0;if(s.alphaValue!=0){s.alphaValue=0;s.movedOut=!0;if(o.forceCSS){s.css("left",-1e4);s.css("top",-1e4);return}TweenLite.set(s,{x:-1e4,y:-1e4})}return}s.alphaValue!=r.a&&x(f,r.a,s);var l=r.x+" "+r.y+" "+T(r.sx)+" "+T(r.sy)+" "+T(r.o)+" "+s.movedOut;if(a){var c=a.matrix;l=l+c.x+" "+c.y+" "+T(c.w)+" "+T(c.h)}else if(o.seq){i[e]>=s.totalFrames?i[e]=0:null;var h=i[e];l+=h>>0}if(s.matrixString==l&&!s.movedOut)return;s.matrixString=l;s.movedOut=!1;if(o.forceCSS){s.css("left",r.x);s.css("top",r.y);s.css("width",r.sx*o.w>>0);s.css("height",r.sy*o.h>>0);f.css("left",o.m*r.sx);f.css("top",o.n*r.sy);return}if(a){var c=a.matrix,p=c.x+a.imageInfo.x*c.w,d=c.y+a.imageInfo.y*c.h;TweenLite.set(s,{x:r.x-p>>0,scaleX:T(r.sx),scaleY:T(r.sy),y:r.y-d>>0,rotation:r.o});var v=a.div;v.css("width",c.w>>0);v.css("height",c.h>>0);TweenLite.set(v,{x:p>>0,y:d>>0});return}if(o.seq){h>>=0;var m=o.seq[h],g=s.parent();TweenLite.set(s,{x:-u[e][0],y:-u[e][1],width:m[2],height:m[3]});TweenLite.set(g,{left:r.x,top:r.y,scaleX:r.sx,scaleY:r.sy,rotation:r.o});TweenLite.set(f,{x:-m[0],y:-m[1],width:o.w,height:o.h});return}if(n.precise){TweenLite.set(s,{x:r.x,scaleX:r.sx,scaleY:r.sy,y:r.y,rotation:r.o});return}TweenLite.set(s,{x:r.x>>0,scaleX:r.sx,scaleY:r.sy,y:r.y>>0,rotation:r.o})}function S(e,t){for(var n in E)t[E[n]]==undefined&&(t[E[n]]=e?e[E[n]]:0)}function x(e,t,n){t=T(t);n.alphaValue=t;TweenLite.set(e,{autoAlpha:t})}function T(e){return Math.round(e*1e3)/1e3}function N(e){return Math.round(e)}function C(e,t,n){return t==undefined?0:n==undefined?1:e<t?0:e>n?1:(e-t)/(n-t)}var e=[],t={},n={},r=0,i={},s={},o={},u={},a={},f={},E=[1,2,3,4,5,6];return{init:d,createTimeline:m,resetSeq:c,setSeqState:l,setSeqCurrentFrame:h}}();
+            var layerNames,
+                animationData = {},
+                animations = {},
+                svgs = {},
+                seqs = {},
+                imageInfos,
+                imageNumber = 0,
+                eases,
+                fps = 36,
+                tl,
+                container,
+                ctaHot;
+                
+            var ua = window.navigator.userAgent.toLowerCase(),
+                hasTouch = ('ontouchstart' in window),
+                isS3 = ua.match(/gt\-i9300/i) !== null,
+                isS4 = ua.match(/gt\-i9500/i) !== null;
+
+            var debug = false;
+            function mobileStart(){
+                function trace(){}
+                var $window = $(window),
+                    $html = $("html"),
+                    $body = $('body');
+                container = $('.container'),
+                ctaHot =$('.mainl0'); 
+                tl = TweenMax;
+                
+
+
+                if (!isS4) $('body').addClass('notS4');
+                if (isS3) container.addClass('S3');
+
+                container.on("click", function(e) {
+                    window.open(clickTag);
+                    // Enabler.exit(Background_Exit);
+                    tl.killDelayedCallsTo(enableCta);
+                    enableCta();
+                    console.log('========click Background_Exit=======');
+                    //animations['main'].toEnd();
+                    //animations['cta'].toEnd();
+                });
+                ctaHot.on("click", function(e) {
+                    window.open(clickTag1);
+                    // Enabler.exit(CTA_Exit)
+                    tl.killDelayedCallsTo(enableCta);
+                    enableCta();
+                    console.log('========click CTA_Exit=======');
+                    //animations['main'].toEnd();
+                    //animations['cta'].toEnd();
+                    e.preventDefault();
+                    e.stopPropagation();
+                });
+            }
+            function enableCta(){
+                container.on("mouseenter", function(e) {
+                    if(hasTouch) return;
+                    // animations['cta'].addPause(1.9);
+                    animations['cta'].play(0.1);
+                });
+                container.on("mouseleave", function(e) {
+                    if(hasTouch) return;
+                    // animations['cta'].play(2.4);
+                });
+            }
+            function initTimeLine() { 
+                $('.mainl0').removeClass('preload').html($('.cta')); 
+   
+                $TL.init(layerNames, imageInfos, eases, seqs, svgs);
+                animations['main'] = $TL.createTimeline(animationData['main'], $('.main'), 0, true);  
+                animations['cta'] = $TL.createTimeline(animationData['cta'], $('.cta'), 0, true);  
+
+                for (var i in animations) {
+                    if (animations[i].resize) animations[i].resize(1,1);
+                }
+                animations['main'].pause(0);
+                animations['cta'].pause(0.0001);
+                var NUM = $('.preload img').length;
+                var isStart = false;
+                var count = 0;
+                $('.preload img').on('load', function() {
+                    count++;
+                    if (count >= NUM && !isStart) {
+                        isStart = true;
+                        tl.to(container, .3, {
+                            opacity: 1
+                        });
+                        tl.delayedCall(.2, animations['main'].play, [0.0001]);
+                        tl.delayedCall(6.2, animations['cta'].play, [0.001]);
+                        //=========================time for cta enable==================
+                        tl.delayedCall(7,enableCta);
+                    }
+                });
+            }
+        </script>
+    <script type="text/javascript">
+    window.onload = function() {
+        pageLoadedHandler();
+        function pageLoadedHandler(){      
+                var prex ='https:'; 
+                //Load in Javascript
+                loadJs(prex + '//cdnjs.cloudflare.com/ajax/libs/zepto/1.1.3/zepto.min.js', function (){
+                    loadJs(prex + '//cdnjs.cloudflare.com/ajax/libs/gsap/1.11.4/TweenMax.min.js', function (){
+                        // loadJs('Timeline-ck.js', function (){
+                            // loadJs('app.js', function (){
+                                mobileStart();
+                                startAni();
+                            // });
+                        // });
+                    });
+                });
+            }
+        function loadJs(file, complete){
+            var ej = document.createElement('script');
+            ej.setAttribute('type', 'text/javascript');
+            ej.setAttribute('src',file);  
+            ej.onload = complete;
+            document.getElementsByTagName('head')[0].appendChild(ej);
+           
+        };
+        function startAni(){
+          	
+fps=24;
+	imageInfos=[{x:0,y:0,w:300,h:80},{x:-0.004,y:-0.5,w:261,h:2},{x:0.019,y:0.2,w:90,h:2},{x:0,y:0,w:263,h:21},{x:0,y:0,w:56,h:11},{x:0,y:0,w:91,h:23},{x:-0.002,y:0.361,w:90,h:2},{x:0,y:0,w:260,h:13},{x:0,y:0,w:96,h:16},{x:0,y:0,w:264,h:17},{x:0,y:0,w:295,h:164},{x:0,y:0,w:300,h:250},{x:0,y:0,w:409,h:245}];
+	
+	
+	layerNames=[["ctal0",[2,-1]],["ctal1",[4,-1]],["ctal2",[5,-1]],["mainl0",[6,-1]],["mainl00",[3,-1]],["mainl1",[3,-1]],["mainl2",[7,-1]],["mainl3",[1,-1]],["mainl4",[8,-1]],["mainl5",[9,-1]],["mainl6",[0,-1]],["mainl9",[10,-1]],["mainl7",[11,-1]],["mainl8",[12,-1]]];
+	eases=[null,[0.576,0,0.42,1],[0.5,0.1,0.48,0.933],[0.48,0,0.528,1],[0.446,0,0.523,1],[0.511,0,0.475,1],[0.587,0,0.474,1],[0.211,0.583,0.562,1],[0.482,0,0.415,1],[0.234,0.352,0.7,0.884],[0.105,0.7,0.37,1]];
+	totalFrame=132;
+
+animationData["cta"]=[0,[1440,[2,[0,1,0,1,1,1,0,]],[1,[0,-57.1,-3.4,1,1,1,0,1],[17,94.7,,,,,,]],[0,[0,-0.2,0.65,1,1,1,0,]]]];
+animationData["main"]=[0,[1440,[13,[0,-587.7,-365.15,3.342,3.342,1,0,9],[74,-451.8,-274.8,2.726,2.726,,,10],[84,-2,-7,0.742,0.742,,,]],[12,[0,-33.9,-28.25,1.226,1.226,1,0,9],[74,0,0,1,1,,,10],[84,120,67,0.278,0.278,,,]],[11,[0,,,,,0,],[8,0,86,1,1,0,0,8],[19,,,,,1,,]],[10,[0,0,252,1,1,1,0,7],[9,,171,,,,,]],[9,[0,,,,,0,],[9,18,188,1,1,0,0,5],[28,,,,,1,,],[74,,,,,,,6],[83,,,,,0,,]],[8,[0,,,,,0,],[21,18,221,1,1,0,0,5],[36,,,,,1,,]],[7,[0,,,,,0,],[81,149,207,0.006,1,1,0,4],[92,20,,1,,,,]],[6,[0,,,,,0,],[92,19,208.3,1,1,1,0,3],[104,,188,,,,,]],[5,[0,,,,,0,],[92,18.9,185.7,1,1,1,0,]],[4,[0,0,0,1.141,12.135,0.01,0,]],[3,[0,,,,,0,],[104,130,217,1,1,0,0,2],[114,,,,,1,,]]]];
+	initTimeLine();
+
+        }
+    }
+    </script>
+    <style type="text/css"></style>
+</body>
+
+</html>

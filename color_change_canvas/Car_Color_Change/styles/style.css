@@ -1,0 +1,62 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+html,
+body,
+div,
+canvas,
+img {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: #e7e7e7;
+}
+#container {
+  /*width: 950px;
+    height: 446px;*/
+  width: 475px;
+  height: 223px;
+  position: relative;
+  margin: 0 auto;
+  top: 100px;
+}
+#container .car {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+#container .car .c-render {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+#container .color-switch {
+  position: absolute;
+  top: 240px;
+  list-style: none;
+  padding: 0;
+}
+#container .color-switch .color {
+  display: inline-block;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  border: 3px solid #d41e1d;
+  background: #ccc;
+}
+#container .color-switch .black {
+  background: #0a0a0b;
+}
+#container .color-switch .brown {
+  background: #533838;
+}
+#container .color-switch .red {
+  background: #900101;
+}
+#container .color-switch .blue {
+  background: #1f47b1;
+}

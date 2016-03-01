@@ -1,0 +1,128 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	outline: none;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul, li {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+#canvas_wrapper {
+	// visibility: none;
+	opacity: 0;
+	width: 320px;
+	margin: auto;
+	-webkit-transition: all .5s ease-out .5s;
+	-moz-transition: all .5s ease-out .5s;
+	-ms-transition: all .5s ease-out .5s;
+	transition: all .5s ease-out .5s;
+	background: url(img/car.png) 0 0 no-repeat;
+	background-size: 320px 150px;
+	position: relative;
+	width: 320px;
+	height: 150px;
+	#canvas {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		// border: 1px solid #999;
+		// position: absolute;
+		// left: 150px;
+		// top: 10px;
+		// background: #eee;
+		// margin: 20px;
+		cursor: pointer;
+		// background: url(imgs/car.png) 0 0 no-repeat;
+		// background-size: 700px 328px;
+	}
+	div {
+		// display: none;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background: url(img/car-high-light.png) 0 0 no-repeat;
+		background-size: 100%;
+	}
+}
+#laser {
+	display: none;
+}
+#selector {
+	width: 210px;
+	margin: auto;
+	height: 42px;
+}
+.color {
+	height: 40px;
+	width: 40px;
+	float: left;
+	border: 1px solid #eee;
+	text-align: center;
+	line-height: 80px;
+	cursor: pointer;
+	background: rgb(158, 158, 158);
+	-webkit-border-radius: 100%;
+	border-radius: 100%;
+}
+.color div {
+	width: 100%;
+	height: 100%;
+	opacity: .5;
+	-webkit-border-radius: 100%;
+	border-radius: 100%;
+}
+#red div {
+	background: rgb(0, 0, 0);
+}
+#blue div {
+	background: rgb(1, 3, 40);
+}
+#black div {
+	background: rgb(255, 255, 255);
+}
+#green div {
+	background: rgb(242, 202, 168);
+}
+#yellow div {
+	background: rgb(80, 0, 0);
+}
+
+#fps-wrapper {
+	text-align: center;
+	clear: both;
+}

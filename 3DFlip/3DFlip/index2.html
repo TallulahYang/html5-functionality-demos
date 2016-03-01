@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+        <title>3DCardFlip</title>
+        <meta name="description" content="CardFlip" />
+        <meta name="author" content="Tallulah" />
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="jquery-1.8.1.min.js"></script>
+        <script type="text/javascript" >
+        $(function() {
+            var questionPanels = $('#question-list li');
+            console.log(questionPanels.length);
+            for(var i =0;i<questionPanels.length;i++){
+            	var temp = questionPanels.eq(i);
+            	animateFlip(temp,i*200);
+            }
+        });
+        function animateFlip(target,delay){
+        	setTimeout(function(){
+				$({deg: 90}).animate({deg: 0}, {
+                    duration: 500,
+                    step: function(now) {
+                        target.css({
+                            transform: 'rotateX(' + now + 'deg)'
+                        });
+                    }
+                })
+                // zepto  
+                //target.animate({'rotateX':'0deg'},500);
+				target.find('.flip-front-bg').animate({
+					'opacity': '1'
+				},400);
+        	},delay);
+        }
+        </script>
+    </head>
+    <body>
+    	<div class="container">
+		  <div id="card">
+		    <ul id="question-list" class="question-list">
+                <li class="question-container">
+                	<div class="flip-top">
+                		<div class="question-title">
+	                        <img src="images/question-title-saving.png" alt="">
+	                    </div>
+	                    <div class="question-arrow">
+	                        <img src="images/question-title-arrow.png" alt="">
+	                    </div>
+                	</div> 
+                	<div class="flip-front">
+                		<div class="flip-front-bg"></div>
+                	</div>
+                </li>
+                <li class="question-container">
+                	<div class="flip-top">
+	                    <div class="question-title">
+	                        <img src="images/question-title-taxes.png" alt="">
+	                    </div>
+	                    <div class="question-arrow">
+	                        <img src="images/question-title-arrow.png" alt="">
+	                    </div>
+	                </div>
+	                <div class="flip-front">
+                		<div class="flip-front-bg"></div>
+                	</div>
+                </li>
+                <li class="question-container">
+                	<div class="flip-top">
+	                    <div class="question-title">
+	                        <img src="images/question-title-portfolio.png" alt="">
+	                    </div>
+	                    <div class="question-arrow">
+	                        <img src="images/question-title-arrow.png" alt="">
+	                    </div>
+	                </div>
+                    <div class="flip-front">
+                		<div class="flip-front-bg"></div>
+                	</div>
+                </li>
+                <li class="question-container">
+                	<div class="flip-top">
+	                    <div class="question-title">
+	                        <img src="images/question-title-growth.png" alt="">
+	                    </div>
+	                    <div class="question-arrow">
+	                        <img src="images/question-title-arrow.png" alt="">
+	                    </div>
+	                </div>
+                    <div class="flip-front">
+                		<div class="flip-front-bg"></div>
+                	</div>
+                </li>
+            </ul>
+		  </div>
+		</div>
+    </body>
+</html>

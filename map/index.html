@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <!-- DO NOT REMOVE! THIS DISABLES PHONE NUMBER LINKING IN MOBILE SAFARI. -->
+    <meta name="format-detection" content="telephone=no" />
+    <title>768x1024</title>
+    <!-- DO NOT REMOVE! THIS GIVES AD CREATIVE 1-TO-1 LAYOUT RATIO AND PREVENTS USER RESIZING. -->
+    <meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- DO NOT REMOVE! THIS IS THE CONTAINER FOR AD CREATIVE. -->
+    <div id="container" class="container">
+        <!-- Map -->
+        <section id="expanded-map" class="expanded-map">
+            <header id="map-header" class="map-header">
+                <div data-whichExpanded="map" class="js-back-to-mainpage back-to-mainpage">
+                    <img src="images/back-to-mainpage-white.jpg" alt="">
+                </div>
+                <div class="map_title">
+                    <img src="images/map_title.png" alt="">
+                </div>
+                <div class="map_title_line"></div>
+            </header>
+            <article>
+                <div class="map-content">
+                    <div class="map-detail">
+                        <div class="search">
+                            <input class="zip" data-role="zip" type="tel" placeholder="Enter Zip Code"></input>
+                            <div class="location-ico"></div>
+                            <div class="search-btn"></div>
+                        </div>
+                        <div id="map-canvas"></div>
+                        <div class="map_results">
+                            <span class="map_result_des">
+                                <img src="images/map_result_des.png" alt="">
+                            </span>
+                            <div class="map_result_line"></div>
+                            <ul class="list-items">  
+                            </ul>
+                        <div>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </div>
+    <script src="js/zepto.js"></script>
+    <script type="text/javascript" src="js/mapData.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAGEpK5ss2lRjW4D4ecKg6GRy1xsPZFgoA&amp;sensor=true"></script>
+    <script type="text/javascript" src="js/markerwithlabel.js"></script>
+    <script src="js/mapSearch.js"></script>
+</body>
+
+</html>
