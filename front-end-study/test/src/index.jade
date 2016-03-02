@@ -1,0 +1,37 @@
+doctype html
+//[if lt IE 8 ]>  <html class="no-js ie lt-ie10 lt-ie9 lt-ie8" lang="en"> <![endif]
+//[if IE 8]>  <html class="no-js ie lt-ie10 lt-ie9" lang="en"> <![endif]
+//[if IE 9]>  <html class="no-js ie lt-ie10" lang="en"> <![endif]
+//[if (gt IE 9)|!(IE)]><!
+html(class="no-js", lang="en")
+	//<![endif]
+
+	title Intel 2 in 1
+  	include partials/meta.html
+
+  	link(rel="stylesheet", href="assets/bundle/entry/#{page}.css")
+
+   	include partials/analytics.html
+
+   	body(class="page")
+   		#content
+   			h1 Example
+   			case friends
+      		when 0
+        		p you have no friends
+      		when 1
+        		p you have a friend
+      		default
+        		p you have #{friends} friends
+
+        input(type="checkbox", checked)
+
+        - var items = ["one", "two", "three"]
+		each item in items
+  		li= item
+
+  		obj = { foo: 'bar' }
+		each val, key in obj
+  		li #{key}: #{val}
+    
+    script(data-main="scripts/config", src="../vendors/requirejs/require.js")

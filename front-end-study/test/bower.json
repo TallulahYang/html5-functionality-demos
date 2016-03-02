@@ -1,0 +1,30 @@
+{
+  "name": "test",
+  "authors": [
+    "Tallulah <tallulah.yang@gmail.com>"
+  ],
+  "description": "tallulah's backbone study demo",
+  "main": "",
+  "moduleType": [],
+  "keywords": [
+    "demo"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^2.2.1",
+    "underscore": "^1.8.3",
+    "backbone": "^1.2.3",
+    "requirejs": "^2.1.22",
+    "domReady": "requirejs-domready#^2.0.1",
+    "lesshat": "^3.0.2",
+    "gsap": "greensock#^1.18.2"
+  }
+}
